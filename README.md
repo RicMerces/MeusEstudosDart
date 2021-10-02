@@ -1,12 +1,37 @@
 <h1 align="center"><img src="https://iconape.com/wp-content/files/yb/61798/svg/flutter-logo.svg" height="60px" > Flutter </h1> 
 
 
-
+### O que é o Flutter ?
 Flutter nada mais é que uma ferramenta que permite que você programando em uma linguagem consiga gerar codigos para as linguagens nativas usando apenas **UM CODIGO FONTE**. Escrito na linguagem **Dart** ele transpila para as plataformas **Android** e **IOS** para suas respectivas Linguagens (Java/Kotlin) + (Objetive-C/Switft).
 
 <p align="center">
 <img  src="https://www.kindpng.com/picc/m/329-3292914_android-clipart-ios-android-ios-logo-transparent-hd.png" height="80px" > </p>
 
-O Dart é uma Linguagem de Programação que tem baixa de curva de aprendizagem, ou seja, uma  linguagem bem simples e que para quem veio de outras Linguagens como : **Java , C# ou JS**; Tera bastante facilidade de aprender.
+
+### Curva de Aprendizado
+O Dart é uma Linguagem de Programação que tem baixa curva de aprendizado, ou seja, uma  linguagem bem simples e que para quem veio de outras Linguagens como : **Java , C# ou JS**; Tera bastante facilidade de aprender.
+
+### Google apadrinhou o Flutter ?
+O Dart se tornou uma das linguagens padrões do Google, e o Flutter um dos seus Principais Frameworks, logo uma linguagem que o Proprio Google controla tendo funcionalidades para **Mobile Multiplataforma - WEB - Desktop - IoT**
+
+### SDK (Software Development Kit)
+Ferramentas que transpilam os codigos em linguagens para outras linguagens e desenvolver o multiplataforma com mais Facilidade
+
+### Frameworks / Widget Library
+Componente de UI reutilizaveis (= widgets), funções utilitárias, pacotes
+
+### O que é Dart ?  
+
+<img  src="https://camo.githubusercontent.com/831fcb3aa1e35685a351128ada1c6555843bc0220020b74fbb1a50f7b91b077f/68747470733a2f2f6477676c6f676f2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f30332f446172745f6c6f676f2e706e67" height="80px" > 
+
+Linguagem Criada pelo Google focada no Frontend de (aplicações Mobile e Web) ajudando no desenvolvimento de Interface do Usuário (UI).
+
+- Linguagem de tipagem forte (VARIAVEIS BEM DEFINIDAS)
+- Orientada a Objetos 
+- Sintaxe semelhante ao Java, JS e C#
+
+
+
+
 
 
