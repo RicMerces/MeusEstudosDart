@@ -44,8 +44,22 @@ Cada componente de uma tela é descrito como Widget, fazendo um paralelo, na web
 
 ### A UI do Aplicativo é uma Arvore de Widgets
 
-A interface é gerada através de descrições de cada componente/Widget inserido na interface 
+A interface é gerada através de descrições de cada componente/Widget inserido na interface
 
+### UI em Codigo
+Existem tecnologias que usam ferramentas para personalizar a interface e gera-la como por exemplo no JavaMobile que usamos o XML Edit para manipular as telas arrastando cada componente semelhantemente ao que fazemos em ferramentas de Design, porem no Flutter isso existe em ferramentas a parte entretanto, é mais comum usarmos os codigos para gerar as telas usando um sistema Hot Reload para ver no mesmo time as alterações na UI.
+
+
+### Unica base de codigo 
+```dart
+main.dart
+home.dart
+list.dart
+```
+### Suportando Diferenças 
+Ele suporta pequenos padrões que em cada sistema é suportado e burocraticamente usado para cada Interface 
+
+<img  src="https://penji.co/wp-content/uploads/2020/08/Secondary-Menu-1.jpeg" >
 
 
 
