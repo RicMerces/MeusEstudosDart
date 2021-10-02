@@ -62,4 +62,24 @@ Ele suporta pequenos padrões que em cada sistema é suportado e burocraticament
 
 <img  src="https://penji.co/wp-content/uploads/2020/08/Secondary-Menu-1.jpeg" >
 
+### Transição do Flutter para APP Nativo 
+
+Codigo em desenvolvido em dart, usando a api do Flutter com Utilitarios e Widgets são transpilados pelo Flutter SDK para Codigo nativo de cada uma das plataformas.
+
+### O Flutter Não usa Widgets Nativos
+
+Os Widgets usados são do proprio flutter e transpilados para cada tipo nativo, os codigos nativos são usados fora do Flutter em um documento a parte para cada codigo nativo diferentemente no React Native que permite que você informe widgets de uma plataforma diretamente no codigo. Realizando uma Implementação Própria (O Flutter calcula cada pixel desenhado para gerar em cada SO), Logo o Framework permite mais flexibilidade na criação das Interfaces sem perda de tradução.
+
+### Material Design
+O Material Design é um sistema de Design criado pelo Google, que é implementado de forma nativa nas telas, porem ele é amplamente personalizavel funcionando até para iOS mesmo sendo do Google. O Material é embutido dentro do Flutter porem existem tambem elementos de Widgets com estilo da Applle usando o Cupertino. Ou seja ambas as plataformas são respeitadas caso seja necessario usar cada elemento.
+
+
+
+
+
+
+
+
+
+
 
