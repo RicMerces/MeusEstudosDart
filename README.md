@@ -49,6 +49,7 @@ A interface é gerada através de descrições de cada componente/Widget inserid
 ### UI em Codigo
 Existem tecnologias que usam ferramentas para personalizar a interface e gera-la como por exemplo no JavaMobile que usamos o XML Edit para manipular as telas arrastando cada componente semelhantemente ao que fazemos em ferramentas de Design, porem no Flutter isso existe em ferramentas a parte entretanto, é mais comum usarmos os codigos para gerar as telas usando um sistema Hot Reload para ver no mesmo time as alterações na UI.
 
+<img  src="https://flutter.axuer.com/assets/tools/android-studio/hot-reload-36252b9c05984443ea5cd1960bab0f4ca904a6dfbe71165af4ed7f1b1c037124.gif" >
 
 ### Unica base de codigo 
 ```dart
@@ -60,7 +61,5 @@ list.dart
 Ele suporta pequenos padrões que em cada sistema é suportado e burocraticamente usado para cada Interface 
 
 <img  src="https://penji.co/wp-content/uploads/2020/08/Secondary-Menu-1.jpeg" >
-
-
 
 
