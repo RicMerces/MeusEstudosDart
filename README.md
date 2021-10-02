@@ -31,6 +31,21 @@ Linguagem Criada pelo Google focada no Frontend de (aplicações Mobile e Web) a
 - Sintaxe semelhante ao Java, JS e C#
 
 
+### Conceitos do Flutter
+
+- **UI em Codigo** : Constroi através de uma arvore de Widgets
+- **Suporte de Diferentes Plataformas** : Existem codigos especificos para cada plataforma que o Flutter Suporta
+- **Unica Base de Codigo** : Usamos Dart em 96% do codigo o resto são pequenas mudanças para se adequar a cada plataforma como foi dito no topico acima
+
+### Tudo é Widget !
+Cada componente de uma tela é descrito como Widget, fazendo um paralelo, na web quando vamos fazer codigos HTML dividimos cada parte em DIV, no flutter dividimos o codigo em Widgets.
+
+<img  src="https://koenig-media.raywenderlich.com/uploads/2020/09/PlatformAwareWidgets-feature.png" >
+
+### A UI do Aplicativo é uma Arvore de Widgets
+
+A interface é gerada através de descrições de cada componente/Widget inserido na interface 
+
 
 
 
