@@ -6,3 +6,34 @@ print("Ola Mundo !");
 ````
 Pronto Você esta libertado ! 
 
+
+### Variaveis
+````dart
+int inteiro = 10;
+double decimal = 2.5;
+String nome = "Ricardo Oliveira";
+var Variavel = "Random";
+````
+Para descobrir qual o tipo  de uma varivel var temos o comando **variavel.runtimeType**
+
+Atualmente adicionaram um mecanismo de atribuir valores input a variaveis assim como funciona o **scanf** do C
+
+```dart
+import 'dart:io';
+
+main(){
+    String? teste = stdin.realLineSync();
+}
+```
+Nesse caso quando informamos uma interrogação o tipo sera atribuido depois de digitado o input, da mesma forma funciona se usarmos o **stdin.realLineSync()!** .
+
+```dart
+import 'dart:io';
+
+main(){
+    String teste = stdin.realLineSync()!;
+}
+```
+
+
+
