@@ -2,6 +2,9 @@ import 'dart:io';
 
 main() {
   //Area da circuferencia = PI * (r * r)
-  String texto = stdin.readLineSync()!;
-  print(texto);
+  print("Informe um valor de raio para calcular area da circuferencia");
+  var valorRaio = stdin.readLineSync();
+  final double raio = double.parse(valorRaio!);
+  double area = 3.14 * (raio * raio);
+  print(area);
 }
