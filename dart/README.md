@@ -90,6 +90,10 @@ print(valor03 + 10); // -41.90
 É bom lembrar que quando colocamos uma variavel ela automaticamente numerica ela ja entra em parenteses por isso o ABS funciona porem quando colocamos um numero negativo direto sem parenteses não funciona como no caso do **valor03**
 
 *Converter uma String em valor numerico*
+
+
+Existem varias possibilidades de conversão de String para Numero bem semelhante ao que fazemos no C#, Sintaxe quase igual.
+
 ```dart
 double n1 = double.parse("12.3232");
 int n2 = int.parse("12");
@@ -97,6 +101,16 @@ int n2 = int.parse("12");
 String numero = "34";
 double n3 = double.parse(numero);
 ```
+
+*Converter String para Upper/Lower case*
+
+Assim como fazemos em quase 90% das linguagens incluindo até o CSS que nem é de programação, podemos converter valores que estão maiusculas em minusculas e vice versa simples apenas usar o **oUpperCase()** para converter em Maiusculas e **toLowerCase()** para converter em Minusculas.
+
+```dart
+
+
+
+
 
 
 
