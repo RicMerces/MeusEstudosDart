@@ -53,4 +53,27 @@ main() {
 }
 ```
 
+### Tipos Basicos
+- Numeros (int | double)
+- String (String)
+- Booleano (bool)
+
+```dart
+int n1 = 10; //Numero inteiro
+double n2 = 2.5; // Numero decimal 
+String nome = 'Ricardo Olveira'; // Texto
+bool x = true; // Verdadeiro ou Falso
+```
+
+#### Bom saber  #1
+Quando realizamos Operacoes entre um numero int com um numero double, sem criar uma variavel para atribuir as respostas
+```dart
+int x = 10;
+double y = 3.9;
+print(x + y);
+```
+O resultado sera 13.9, no caso um valor double, isso pois o double pode ter valores int e double logo é mais globalizado e por isso converte automaticamente.
+
+
+
 
