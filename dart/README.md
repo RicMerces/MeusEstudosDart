@@ -74,6 +74,23 @@ print(x + y);
 ```
 O resultado sera 13.9, no caso um valor double, isso pois o double pode ter valores int e double logo é mais globalizado e por isso converte automaticamente.
 
+##### Modulo 
+Converter um numero negativo em positivo 
+```dart
+int valor = -50;
+print(valor + 60); // Resultado é 10
+print(valor.abs() + 60); //Resultado é 110
+
+double valor02 = (-50.10).abs();
+double valor03 = -50.10.abs();
+print(valor02 + 10); // 60.10
+print(valor03 + 10); // -41.90
+```
+É bom lembrar que quando colocamos uma variavel ela automaticamente numerica ela ja entra em parenteses por isso o ABS funciona porem quando colocamos um numero negativo direto sem parenteses não funciona como no caso do **valor03**
+
+
+
+
 
 
 
