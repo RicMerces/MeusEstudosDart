@@ -156,8 +156,42 @@ Map telefones = {
   print(telefones.entries); //Mapeamento para percorrer fors
 ```
 
+### Set
+Set é um conjunto de valores não indexados ou seja não para dizer qual a posição de cada valor
+```dart
+var times = {'Vasco', 'Santos', 'Bahia', 'Corinthians'};
+  print(times);
+  print(times is Set);
+  print(times.length);
+  times.add('Flamengo');
+  times.add('Flamengo');
+  times.add('Flamengo');
+  print(times.length);
+  print(times.first);
+  print(times.last);
+  print(times);
+```
+Quando usamos o **var** Ele basicamente define automaticamente o tipo padrão do Set e acaba não permitindo outros tipos, podemos tambem antes como padrão o tipo do Set que seria mais ou menos:
+```dart
+Set<String> conjunto = {'a', 'b', 'c'};
+```
+Podemos tambem liberar todos os tipos que no caso seria usando apenas o Set diretamente na hora da definição
 
-
+```dart
+Set times = {'Vasco', 'Santos', 'Bahia', 'Corinthians'};
+  print(times);
+  print(times is Set);
+  print(times.length);
+  times.add(123);
+  times.add('Flamengo');
+  times.add('Flamengo');
+  times.add('Flamengo');
+  times.add(10 + 10);
+  print(times.length);
+  print(times.first);
+  print(times.last);
+  print(times);
+```
 
 
 

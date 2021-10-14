@@ -19,4 +19,20 @@ main() {
   print(telefones.values);
   print(telefones.keys);
   print(telefones.entries);
+
+  Set times = {'Vasco', 'Santos', 'Bahia', 'Corinthians'};
+  print(times);
+  print(times is Set);
+  print(times.length);
+  times.add(123);
+  times.add('Flamengo');
+  times.add('Flamengo');
+  times.add('Flamengo');
+  times.add(10 + 10);
+  print(times.length);
+  print(times.first);
+  print(times.last);
+  print(times);
 }
+
+Set<String> conjunto = {'a', 'b', 'c'};
