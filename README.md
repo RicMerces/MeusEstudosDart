@@ -9,7 +9,7 @@ Flutter nada mais é que uma ferramenta que permite que você programando em uma
 
 
 ### Curva de Aprendizado
-O Dart é uma Linguagem de Programação que tem baixa curva de aprendizado, ou seja, uma  linguagem bem simples e que para quem veio de outras Linguagens como : **Java , C# ou JS**; Tera bastante facilidade de aprender.
+O Dart é uma Linguagem de Programação que tem alta curva de aprendizado, ou seja, uma  linguagem bem simples e que para quem veio de outras Linguagens como : **Java , C# ou JS**; Tera bastante facilidade de aprender.
 
 ### Google apadrinhou o Flutter ?
 O Dart se tornou uma das linguagens padrões do Google, e o Flutter um dos seus Principais Frameworks, logo uma linguagem que o Proprio Google controla tendo funcionalidades para **Mobile Multiplataforma - WEB - Desktop - IoT**

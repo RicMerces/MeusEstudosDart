@@ -104,7 +104,7 @@ double n3 = double.parse(numero);
 
 *Converter String para Upper/Lower case*
 
-Assim como fazemos em quase 90% das linguagens incluindo até o CSS que nem é de programação, podemos converter valores que estão maiusculas em minusculas e vice versa simples apenas usar o **oUpperCase()** para converter em Maiusculas e **toLowerCase()** para converter em Minusculas.
+Assim como fazemos em quase 90% das linguagens incluindo até o CSS que nem é de programação, podemos converter valores que estão maiusculas em minusculas e vice versa simples apenas usar o **toUpperCase()** para converter em Maiusculas e **toLowerCase()** para converter em Minusculas.
 
 ```dart
 
