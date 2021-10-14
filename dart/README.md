@@ -204,9 +204,28 @@ O Ponto no Dart assim como na maioria das linguagens é um elemento de extrema i
   .padRight(17, '!');
 
   print(valor01);
-
-
 ```
+
+### Condição Simplificada
+A Condição simplificada é uma redução do que fazemos no IF ELSE como no exemplo abaixo 
+
+
+```dart
+import 'dart:io';
+
+void main() {
+  print('Esta chovendo? (s/N)');
+  bool estaChovendo = stdin.readLineSync() == 's';
+
+  print('Esta frio? (s/N)');
+  bool estaFrio = stdin.readLineSync() == 's';
+
+  String resultado = estaChovendo || estaFrio ? "Ficar em casa" : "Sair!!";
+  print(resultado);
+}
+```
+O que acontece basicamente é usar a condição se estiver chovendo ou frio o usuario não deve sair de casa, porem se ambos estiverem false que no caso não forem igual a 's' ele mandaria o usuario sair.
+
 
 
 
