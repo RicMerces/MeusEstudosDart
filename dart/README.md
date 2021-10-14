@@ -107,6 +107,55 @@ double n3 = double.parse(numero);
 Assim como fazemos em quase 90% das linguagens incluindo até o CSS que nem é de programação, podemos converter valores que estão maiusculas em minusculas e vice versa simples apenas usar o **toUpperCase()** para converter em Maiusculas e **toLowerCase()** para converter em Minusculas.
 
 ```dart
+void main() {
+  String string01 = "salve salve familia";
+  String string02 = "SALVE SALVE FAMILIA";
+  print("${string01} Minusculo para ${string01.toUpperCase()} Maiusculo");
+  print("${string02} Maiusculo para ${string02.toLowerCase()} Minusculo");
+}
+```
+Funcionando até para variaveis que por ventura o usuario va informar os valores, caso os valores sejam String eles vão converter corretamente 
+
+```dart
+ print("Escreva alguma frase");
+  String teste = stdin.readLineSync()!;
+
+  print("${teste.toLowerCase()} Minusculo");
+  print("${teste.toUpperCase()} Minusculo");
+```
+
+### Listas
+Uma sequencia de valores atribuidos a um meio em comum, as Listas conseguem diversos valores meio que como atributos.
+
+```dart
+main() {
+  List aprovados = ['Ana', 'Carlos', 'João', 'Antonio', 'Jean'];
+  print(aprovados is List); //Booleano para saber se esse valor é um lista
+  print(aprovados); //Valores internos a lista
+  print(aprovados.elementAt(2)); //Qual o terceiro elemento da lista levando em consideracao que o primeiro é sempre zero
+  print(aprovados[1]); // nesse caso ele oberva o indice o que esta naquela posicao
+  print(aprovados.length); //Quantidades de itens dentro da lista
+}
+```
+
+### Map
+No map definimos uma sequencia de valores, que contem um valor chave e um valor secundario 
+
+```dart
+Map telefones = {
+    'Ricardo': '+55 71 9999-9999',
+    'Arnaldo': '+55 11 9999-9999',
+    'Afonso': '+00 9133390-91313',
+    'Ricardo': '+55 9988340-3244'
+  };
+  print(telefones is Map); //É um map ?
+  print(telefones); //Vai imprimir tanto a chave quantos os valores 
+  print(telefones.length); //Tamanho nesse caso so três 
+  print(telefones.values); //Imprimir apenas os valores
+  print(telefones.keys); // Imprimir apenas as chaves 
+  print(telefones.entries); //Mapeamento para percorrer fors
+```
+
 
 
 
