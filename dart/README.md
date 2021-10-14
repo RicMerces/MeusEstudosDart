@@ -193,6 +193,21 @@ Set times = {'Vasco', 'Santos', 'Bahia', 'Corinthians'};
   print(times);
 ```
 
+### Notação do Ponto 
+O Ponto no Dart assim como na maioria das linguagens é um elemento de extrema importancia pelo fato dele integrar a alguma classe interna do dart, alguma classe criada, uma lista, apenas dividindo um numero decimal... Enfim existem varias aparições do Ponto no codigo é bom mostrar algumas so para que não haja confusão
+
+
+```dart
+  var valor01 = 'Neymar Junior'
+  .substring(0, 6)
+  .toUpperCase()
+  .padRight(17, '!');
+
+  print(valor01);
+
+
+```
+
 
 
 
