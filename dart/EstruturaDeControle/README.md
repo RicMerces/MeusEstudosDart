@@ -31,3 +31,16 @@ A estrutura de Repetição é uma maneira simplificada de automatizar o codigo, 
 - Try Catch
 
 Essas estruturas são as mais comuns na hora do codigo 
+
+### For
+No for temos como declarar a variavel, estabelecer uma condição e um contador tudo dentro do primeiro parenteses. Nesse caso o codigo vai imprimir "Numero 1" até "Numero 10"
+```dart
+void main(){
+  for(int a = 1; a <= 10; a++){
+    print("Numero $a");
+  }
+}
+```
+Podemos usar o for para rodar uma lista, imprimir os valores internos, somar mais um valor, adicionar uma mensagem anterior...
+
+
