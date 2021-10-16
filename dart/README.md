@@ -229,31 +229,6 @@ void main() {
 ```
 O que acontece basicamente é usar a condição se estiver chovendo ou frio o usuario não deve sair de casa, porem se ambos estiverem false que no caso não forem igual a 's' ele mandaria o usuario sair.
 
-```dart
-void main() {
-  var notas = [8.9, 9.3, 9.8, 10.0, 6.9];
-  for (var i = 0; i < notas.length; i++) {
-    print("Nota ${i + 1} = ${notas[i]}");
-  }
-}
-```
-**Nesse exemplo o que acontece ?**
-
-O for ele vai rodar até o limite que é *notas.length* que basicamente é o tamanho da lista, enquanto **i** for menor que o tamanho da lista que no caso é 5 sera imprimido a posição da nota que usa um **i + 1** pois foi necessario a principio deixar os valores começando em zero pois na lista funciona assim, se colocassemos 1 não imprimiria o primeiro valor.
-
-Existem outras maneiras de escrever o codigo caso seja necessario realiazar um codigo mais limpo sem muita comando, podemos usar o elemento **in** criando uma variavel que vai percorrer um valor um por um dentro da lista até acabar 
-
-```dart
-void main() {
-  var notas = [8.9, 9.3, 9.8, 10.0, 6.9];
-
-  for (var nota in notas) {
-    print("O valor da nota é $nota.");
-  }
-}
-```
-Nesse caso não usamos um contador porem podemos 
-
 
 
 
