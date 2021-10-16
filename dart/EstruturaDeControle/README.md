@@ -128,3 +128,40 @@ for(var registro in lancamento.entries){
     print("A serie '$registro.key' foi lançada em $registro.value");
 }
 ```
+
+### While
+O que esta dentro de um While sera executado enquanto ela fizer parte do escopo da condição, quando parar de seguir a condição parara de repetir.
+
+```dart
+String password = "BatatinhaFrita123";
+
+while(password =! "BatatinhaFrita123"){
+    print("Senha Incorreta");
+}
+
+print("Acesso Permitido");
+```
+Assim como no for podemos colocar um limitador/contador
+```dart
+import 'dart:io';
+
+void main() {
+  print("Informe sua senha");
+  String senhaCorreta = "BatatinhaFrita123";
+  String password = stdin.readLineSync().toString();
+  int i = 0;
+  print(password);
+  while (password != senhaCorreta && i < 3) {
+    print("Senha Incorreta ! Você tem ${3 - i} tentativas\nDigite Novamente");
+    password = stdin.readLineSync().toString();
+    i++;
+  }
+  ;
+
+  if (i >= 3) {
+    print("TENTATIVAS ESGOTADAS");
+  } else {
+    print("ACESSO PERMITIDO");
+  }
+}
+```
