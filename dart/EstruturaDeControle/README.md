@@ -78,4 +78,22 @@ void main() {
 }
 ```
 
+Além desses modos podemos incluir uma lista dentro da outra que funciona mais ou menos assim :
 
+```dart
+main(){
+    var matriz = [
+        ["Messi", "Neymar"],
+        ["Cristiano", "Marcelo"],
+        ["Salah", "Mané"],
+        ["Pogba", "Griezman"],
+        ["Thiago Silva", "David Luiz"] 
+    ];
+
+    for(var duplas in matriz){
+        for(var jogador in duplas){
+            print("Jogador : $jogador");
+        }
+    }
+}
+```
