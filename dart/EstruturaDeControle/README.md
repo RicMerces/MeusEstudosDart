@@ -97,3 +97,34 @@ main(){
     }
 }
 ```
+O for percorre tambem MAP assim como nas listas 
+```dart
+void main() {
+  var lancamento = {
+    'LOST': 2004,
+    'The Walking Dead': 2008,
+    'Game Of Thrones': 2013,
+    'Arrow': 2012,
+    'Vikings': 2013
+  };
+
+  for (var seriado in lancamento.keys) {
+    print("A serie '$seriado' foi lançada em ${lancamento[seriado]}");
+  }
+}
+```
+Juntos ou separadamente, juntos no caso coloquemos que a variavel esta contida dentro da key.
+
+```dart
+for(var ano in lancamento.values){
+    print("A nota é $ano");
+}
+
+for(var nomeDaSerie in lancamento.keys){
+    print("A nota é $nomeDaSerie");
+}
+
+for(var registro in lancamento.entries){
+    print("A serie '$registro.key' foi lançada em $registro.value");
+}
+```
