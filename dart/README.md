@@ -230,25 +230,6 @@ void main() {
 O que acontece basicamente é usar a condição se estiver chovendo ou frio o usuario não deve sair de casa, porem se ambos estiverem false que no caso não forem igual a 's' ele mandaria o usuario sair.
 
 
-## Estruturas de Controle
-
-### Condicional
-O if e else assim como em todas as linguagens tem a funcionalidade de através de uma condição definir se o que foi definido esta dentro do escopo, se não estiver vai para o else porem se for o else if havera outra condição e assim por diante.
-
-Exemplo
-```dart
-void main(){
-  bool PalmeirasTemMundial = false;
-
-  if (PalmeirasTemMundial == true){
-    print("Palmeiras foi campeão mundial");
-  }else {
-    print("51 É PINGAKKKKKKKKKKKKK PALMEIRAS NÃO TEM MUNDIAL");
-  }
-}
-```
-O if e else é uma estrutura muito importante para o codigo as vezes pode até definir o rumo do programa, tratar exceções, estrutura de seleção... 
-
 
 
 

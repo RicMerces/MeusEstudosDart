@@ -15,10 +15,19 @@ O if e else assim como em todas as linguagens tem a funcionalidade de através d
 - If e Else
 - If e Else If
 - Estrutura Simplificada
+
 O if e else é uma estrutura muito importante para o codigo as vezes pode até definir o rumo do programa, tratar exceções, estrutura de seleção... 
 
 
 Mas o principal objetivo é realizar uma decisão seja simples 
 
+
 ### Estrutura de Repetição 
-A estrutura de Repetição é uma maneira simplificada de automatizar o codigo, ele permite que através de uma condição
+A estrutura de Repetição é uma maneira simplificada de automatizar o codigo, ele permite que através de uma condição, Podendo haver uma repetição dependendo se a variavel faz parte do escopo da condição ou não...
+
+- For
+- While
+- Do While
+- Try Catch
+
+Essas estruturas são as mais comuns na hora do codigo 
