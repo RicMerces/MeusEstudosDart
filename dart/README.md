@@ -232,7 +232,7 @@ O que acontece basicamente é usar a condição se estiver chovendo ou frio o us
 
 ## Estruturas de Controle
 
-### IF e ELSE
+### Condicional
 O if e else assim como em todas as linguagens tem a funcionalidade de através de uma condição definir se o que foi definido esta dentro do escopo, se não estiver vai para o else porem se for o else if havera outra condição e assim por diante.
 
 Exemplo
