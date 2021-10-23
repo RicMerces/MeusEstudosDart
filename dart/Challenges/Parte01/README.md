@@ -1,4 +1,12 @@
 # Desafios de Logica de Programação
+### Do zero ao infinito 🚀
+```
+Com o objetivo de sanar minhas fraquezas em programação vou 
+começar do zero, realizar todas as atividades se possivel de 
+Logica de programação seguindo toda a cronologia.
+```
+
+
 
 - Faça um Programa que mostre a mensagem "Alo mundo" na tela.
 - Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número].
