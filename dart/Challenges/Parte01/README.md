@@ -2,6 +2,9 @@
 
 # Lista 01
 
+<a href="https://wiki.python.org.br/EstruturaSequencial"> Link </a> 
+
+
 - Faça um Programa que mostre a mensagem "Alo mundo" na tela.
 - Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número].
 
