@@ -165,3 +165,22 @@ void main() {
   }
 }
 ```
+
+### Do While
+Faça enquanto, enquanto estiver dentro de uma condição do **While** o codigo fara o que esta dentro do **Do**
+
+```dart
+import 'dart:io';
+
+void main() {
+  print("Informe seu nome");
+  String nome = stdin.readLineSync()!;
+  String nomeReal = "Ricardo";
+
+  do {
+    print("Nome Incorreto ");
+    print("Digite novamente0");
+    nome = stdin.readLineSync()!;
+  } while (nome != nomeReal);
+}
+```
