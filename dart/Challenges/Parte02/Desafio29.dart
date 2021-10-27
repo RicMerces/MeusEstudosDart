@@ -17,6 +17,6 @@ void main() {
   } else if (queroComprar.toUpperCase() == 'LIVERPOOL') {
     print("O uniforme selecionado foi o do Liverpool");
   } else if (queroComprar.toUpperCase() == 'BRASIL') {
-    print("O uniformme selecionado foi o da seleção brasileira")
+    print("O uniformme selecionado foi o da seleção brasileira");
   }
 }
