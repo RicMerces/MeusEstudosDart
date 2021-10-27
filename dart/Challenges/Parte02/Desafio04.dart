@@ -10,13 +10,16 @@ void main() {
       letra.toUpperCase() == 'O' ||
       letra.toUpperCase() == 'U') {
     print("VOGAL");
-  } else if (double.parse(letra) % 2 == 0 || double.parse(letra) % 2 != 0) {
-    print("AMIGO ISSO É UM NUMERO");
-  } else if (letra.toUpperCase() != 'A' ||
-      letra.toUpperCase() != 'E' ||
-      letra.toUpperCase() != 'I' ||
-      letra.toUpperCase() != 'O' ||
-      letra.toUpperCase() != 'U') {
+  } else {
     print("CONSOANTE");
   }
+  // } else if (double.parse(letra) % 2 == 0 || double.parse(letra) % 2 != 0) {
+  //   print("AMIGO ISSO É UM NUMERO");
+  // } else if (letra.toUpperCase() != 'A' ||
+  //     letra.toUpperCase() != 'E' ||
+  //     letra.toUpperCase() != 'I' ||
+  //     letra.toUpperCase() != 'O' ||
+  //     letra.toUpperCase() != 'U') {
+  //   print("CONSOANTE");
+  // }
 }
