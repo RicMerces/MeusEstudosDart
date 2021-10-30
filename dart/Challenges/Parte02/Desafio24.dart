@@ -1,4 +1,3 @@
-import 'dart:_internal' show printToConsole;
 import 'dart:io';
 
 void main0() {
