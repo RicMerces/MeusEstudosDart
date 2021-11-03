@@ -1,8 +1,13 @@
 import 'dart:io';
 
 void mainn() {
-  double paisA = 80000;
-  double paisB = 200000;
+  print("Informe a população do pais A");
+  var pA = stdin.readLineSync()!;
+  double paisA = double.parse(pA);
+
+  print("Informe a população do pais B");
+  var pB = stdin.readLineSync()!;
+  double paisB = double.parse(pB);
   int ano = 0;
 
   double aumentoA = 0;
