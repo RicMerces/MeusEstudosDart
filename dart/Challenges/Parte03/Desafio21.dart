@@ -1,30 +1,19 @@
 import 'dart:io';
 
 void main() {
-  int nP = 4;
-  int r = 0;
-  int x = 4;
-  while (nP % 2 == 0 || x > 2) {
-    if (r == 0) {
-      print("Informe um numero");
-    } else {
-      print("o numero $nP não é primo, informe outro");
-    }
-    var numero = stdin.readLineSync()!;
-    nP = int.parse(numero);
-    r++;
+  print("Informe um numero");
+  var numero = stdin.readLineSync()!;
+  int n = int.parse(numero);
+  var z = 0;
 
-    if (nP % 2 != 0) {
-      var x = 0;
-      for (int i = 1; i <= nP; i++) {
-        if (nP % i == 0) {
-          x++;
-          print(x);
-        }
-      }
-    } else {
-      x++;
+  for (int i = 1; n >= i; i++) {
+    if (n % i == 0) {
+      z++;
     }
   }
-  print("O NUMERO $nP é PRIMO !");
+  if (z < 3) {
+    print("$n é um Numero primo");
+  } else {
+    print("$n não é um Numero primo");
+  }
 }
