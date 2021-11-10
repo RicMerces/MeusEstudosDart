@@ -6,11 +6,14 @@ void main() {
   var n1 = 0; //Maior
   var n2 = 0; //Menor
   int z = 0;
+  int x = 0;
+  int soma;
   for (int i = 1; i <= int.parse(qtd); i++) {
     print("Informe o $iº numero da lista");
     var numero = stdin.readLineSync()!;
     int nu = int.parse(numero);
-
+    soma = nu + x;
+    x = soma;
     if (nu >= n1) {
       n1 = nu;
 
@@ -20,5 +23,5 @@ void main() {
       }
     }
   }
-  print("O maior numero = $n1 e o menor = $n2");
+  print("O maior numero = $n1 e o menor = $n2 soma = $x");
 }
