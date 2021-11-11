@@ -1,15 +1,16 @@
 import 'dart:io';
 
 void main() {
-  print("Informe um numero");
+  print("Informe um valor ");
   var numero = stdin.readLineSync()!;
   int n = int.parse(numero);
+  var z = 1;
 
   for (int i = 1; i <= n; i++) {
-    for (int z = 1; z <= i;) {
+    while (z <= i) {
       if (i % z == 0) {
+        print("$i e $z");
         z++;
-        print(i);
       }
     }
   }
