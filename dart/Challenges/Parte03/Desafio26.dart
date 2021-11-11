@@ -11,9 +11,13 @@ void main() {
   var ij = 0;
 
   for (int i = 1; i <= ele; i++) {
+    print(
+        "|| QUE COMECE A VOTAÇÃO ||\nTheo Esteves e Ricardo Oliveira [87]\nDavi Simoes e Yuri Lima [38] \nJean Canario e Jordan Brunors [96]");
+    var votacao = stdin.readLineSync()!;
+    voto = int.parse(votacao);
     while (voto != 87 && voto != 96 && voto != 38) {
       print(
-          "|| QUE COMECE A VOTAÇÃO ||\nTheo Esteves e Ricardo Oliveira [87]\nDavi Simoes e Yuri Lima [38] \nJean Canario e Jordan Brunors [96]");
+          "NÃO EXISTE ESSE CANDIDATO ! ESCOLHA É ENTRE : \nTheo Esteves e Ricardo Oliveira [87]\nDavi Simoes e Yuri Lima [38] \nJean Canario e Jordan Brunors [96]");
       var votacao = stdin.readLineSync()!;
       voto = int.parse(votacao);
     }
@@ -29,4 +33,14 @@ void main() {
   print("TR = $tr");
   print("IJ = $ij");
   print("DY = $dy");
+
+  if (tr > ij && tr > dy) {
+    print("Os vencedor da eleição foi a chapa Theo !");
+  } else if (dy > ij && dy > tr) {
+    print("O vencedor da eleição foi a chapa Davi !");
+  } else if (ij > tr && ij > dy) {
+    print("O vencedor da eleição foi a chapa Ian !");
+  } else {
+    print("Houve um empate tecnico");
+  }
 }
