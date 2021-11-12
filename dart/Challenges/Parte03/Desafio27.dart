@@ -17,5 +17,5 @@ void main() {
     x = soma;
     print("A turma $i tem $aluno alunos");
   }
-  print("A Media final de alunos por turma nesse colegio = $soma/t");
+  print("A Media final de alunos por turma nesse colegio = ${soma / t}");
 }
