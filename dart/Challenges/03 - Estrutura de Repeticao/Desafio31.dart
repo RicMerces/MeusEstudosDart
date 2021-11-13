@@ -31,4 +31,18 @@ void main() {
 
   print("Total : $y Reais");
   print("\nQuanto você deseja pagar ?");
+  var pagamento = stdin.readLineSync()!;
+  double dinheiro = double.parse(pagamento);
+  while (dinheiro < y) {
+    print("Você precisa pagar um valor maior ou igual a $y Reais");
+    var pagamento = stdin.readLineSync()!;
+    double dinheiro = double.parse(pagamento);
+  }
+  print("Você deu em dinheiro : ${dinheiro}");
+  double troco = dinheiro - y;
+
+  if (troco == 0) {
+  } else {
+    print("Seu troco é de $troco");
+  }
 }
