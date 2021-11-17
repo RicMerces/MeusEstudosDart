@@ -18,30 +18,50 @@ void main() {
     print("Informe a quantidade");
     var z = stdin.readLineSync()!;
     int qtd = int.parse(z);
-    while(qtd <= 0 ){
+    while (qtd <= 0) {
       print("Informe a quantidade");
       var z = stdin.readLineSync()!;
       qtd = int.parse(z);
     }
     if (x == 100) {
-     if(qtd == 1){
-       hotDog++;
-     }else{
-       int h = 
-     }
-      
+      if (qtd == 1) {
+        hotDog++;
+      } else {
+        hotDog = hotDog + qtd;
+      }
+      print(hotDog);
     }
     if (x == 101) {
-      hamburger++;
+      if (qtd == 1) {
+        hamburger++;
+      } else {
+        hamburger = hamburger + qtd;
+      }
+      print(hamburger);
     }
     if (x == 102) {
-      cheseburger++;
+      if (qtd == 1) {
+        cheseburger++;
+      } else {
+        cheseburger = cheseburger + qtd;
+      }
+      print(cheseburger);
     }
     if (x == 103) {
-      paocomovo++;
+      if (qtd == 1) {
+        paocomovo++;
+      } else {
+        paocomovo = paocomovo + qtd;
+      }
+      print(paocomovo);
     }
     if (x == 200) {
-      refrigerante++;
+      if (qtd == 1) {
+        refrigerante++;
+      } else {
+        refrigerante = refrigerante + qtd;
+      }
+      print(refrigerante);
     }
   }
 }
