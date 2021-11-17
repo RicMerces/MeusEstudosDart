@@ -2,11 +2,13 @@ import 'dart:io';
 
 void main() {
   //Cardapio
-  int hotDog = 1;
-  int hamburger = 1;
-  int cheseburger = 1;
-  int refrigerante = 1;
-  int paocomovo = 1;
+  int hotDog = 0;
+  int hamburger = 0;
+  int cheseburger = 0;
+  int refrigerante = 0;
+  int paocomovo = 0;
+
+  double valorApagar = 1;
 
   int x = 1;
   while (x != 0) {
@@ -14,15 +16,19 @@ void main() {
         "Informe qual o codigo do produto que você deseja\nDigite 0 para finalizar a compra\n--------------------------\n|100| PARA HOTDOG\n|101| PARA HAMBURGER\n|102| PARA CHESEBURGER\n|103| PARA PAO COM OVO\n|200| PARA REFRIGERANTE");
     var y = stdin.readLineSync()!;
     x = int.parse(y);
-
-    print("Informe a quantidade");
-    var z = stdin.readLineSync()!;
-    int qtd = int.parse(z);
-    while (qtd <= 0) {
+    int qtd = 0;
+    if (x == 0) {
+    } else {
       print("Informe a quantidade");
       var z = stdin.readLineSync()!;
       qtd = int.parse(z);
+      while (qtd < 0) {
+        print("Informe a quantidade");
+        var z = stdin.readLineSync()!;
+        qtd = int.parse(z);
+      }
     }
+
     if (x == 100) {
       if (qtd == 1) {
         hotDog++;
@@ -30,6 +36,7 @@ void main() {
         hotDog = hotDog + qtd;
       }
       print(hotDog);
+      valorApagar = valorApagar + (hotDog * 1.20);
     }
     if (x == 101) {
       if (qtd == 1) {
@@ -37,6 +44,7 @@ void main() {
       } else {
         hamburger = hamburger + qtd;
       }
+      valorApagar = valorApagar + (cheseburger * 1.40);
       print(hamburger);
     }
     if (x == 102) {
@@ -46,6 +54,7 @@ void main() {
         cheseburger = cheseburger + qtd;
       }
       print(cheseburger);
+      valorApagar = valorApagar + (cheseburger * 1.30);
     }
     if (x == 103) {
       if (qtd == 1) {
@@ -54,6 +63,7 @@ void main() {
         paocomovo = paocomovo + qtd;
       }
       print(paocomovo);
+      valorApagar = valorApagar + (paocomovo * 1.50);
     }
     if (x == 200) {
       if (qtd == 1) {
@@ -62,6 +72,9 @@ void main() {
         refrigerante = refrigerante + qtd;
       }
       print(refrigerante);
+      valorApagar = valorApagar + (refrigerante * 1.00);
     }
   }
+
+  print(valorApagar);
 }
