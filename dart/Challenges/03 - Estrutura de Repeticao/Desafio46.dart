@@ -29,7 +29,7 @@ void main() {
   }
 
   print("\n$nome");
-  print("Nota maxima = $max");
-  print("Nota minima = $min");
-  print("Media = ${media / 5}");
+  print("Nota maxima = $max m");
+  print("Nota minima = $min m");
+  print("Media = ${media / 5} m");
 }
