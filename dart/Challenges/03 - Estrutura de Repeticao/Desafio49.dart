@@ -12,8 +12,8 @@ void main() {
     soma = (i / x);
     print("${i / x}");
     x += 2;
-    z = i / 2;
     s = soma + z;
+    z = s;
   }
   print(s);
 }
