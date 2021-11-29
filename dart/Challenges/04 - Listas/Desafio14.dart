@@ -13,11 +13,17 @@ void main() {
     print(listas[i]);
     var son = stdin.readLineSync()!;
 
-    if (son.toLowerCase() == "sim") {
+    if (son.toLowerCase() == "nao") {
+    } else {
       x++;
-    } else if (son.toLowerCase() == "não") {}
+    }
   }
 
-  if (x > 2 && x < 5) {
-  } else if (x == 5) {}
+  if (x > 0 && x < 5) {
+    print("Suspeito");
+  } else if (x == 5) {
+    print("Culpado");
+  } else if (x == 0) {
+    print("Inocente");
+  }
 }
