@@ -16,18 +16,17 @@ void main() {
   List numerosInvertidos = [];
   int x = 0;
   int y = 0;
-  int r = numeros.length;
+  int r = numeros.length - 1;
   int sub = 1;
   int z = 0;
   // print(z);
+  print(numeros.last);
 
-  for (int i = 1; i >= numeros.length; i++) {
-    z = numeros[r - sub];
-    numerosInvertidos.add(z);
-    y = x + z;
+  for (int i = numeros.length; i >= 0; i++) {
+    numerosInvertidos.add(numeros.last);
+    numeros.remove(numeros.last);
+    y = numeros.last + x;
     x = y;
-
-    sub--;
   }
 
   print("c) $numerosInvertidos");
