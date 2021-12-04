@@ -1,28 +1,51 @@
 import 'dart:io';
 
 void main() {
-// Uma empresa de pesquisas precisa tabular os resultados da seguinte enquete feita a um grande quantidade de organizações:
-// "Qual o melhor Sistema Operacional para uso em servidores?"
+  print("Informe o numero de funcionarios");
+  var nF = stdin.readLineSync()!;
+  int funcionarios = int.parse(nF);
 
-// As possíveis respostas são:
+  List w10 = [];
+  List linux = [];
+  List mac = [];
 
-// 1- Windows Server
-// 2- Unix
-// 3- Linux
-// 4- Netware
-// 5- Mac OS
-// 6- Outro
-// Você foi contratado para desenvolver um programa que leia o resultado da enquete e informe ao final o resultado da mesma. O programa deverá ler os valores até ser informado o valor 0, que encerra a entrada dos dados. Não deverão ser aceitos valores além dos válidos para o programa (0 a 6). Os valores referentes a cada uma das opções devem ser armazenados num vetor. Após os dados terem sido completamente informados, o programa deverá calcular a percentual de cada um dos concorrentes e informar o vencedor da enquete. O formato da saída foi dado pela empresa, e é o seguinte:
-// Sistema Operacional     Votos   %
-// -------------------     -----   ---
-// Windows Server           1500   17%
-// Unix                     3500   40%
-// Linux                    3000   34%
-// Netware                   500    5%
-// Mac OS                    150    2%
-// Outro                     150    2%
-// -------------------     -----
-// Total                    8800
+  for (int i = 0; i < funcionarios; i++) {
+    print("Informe seu nome ");
+    String nome = stdin.readLineSync()!;
+    print("Olá $nome Qual SO você usa ?");
+    print("[1] Windows");
+    print("[2] Linux");
+    print("[3] MacOS");
+    var sn = stdin.readLineSync()!;
+    int so = int.parse(sn);
 
-// O Sistema Operacional mais votado foi o Unix, com 3500 votos, correspondendo a 40% dos votos.
+    while (so > 3 || so < 1) {
+      print("Não temos esse SO em nossos dispositivos");
+    }
+    if (so == 1) {
+      print("Voce selecionou Windows");
+      w10.add(nome);
+    } else if (so == 2) {
+      print("Voce selecionou Linux");
+      linux.add(nome);
+    } else if (so == 3) {
+      print("Voce selecionou MacOS");
+      mac.add(nome);
+    }
+  }
+  String maior;
+  if (w10.length > mac.length && w10.length > linux.length) {
+    maior = "Windows";
+  } else if (mac.length > w10.length && mac.length > linux.length) {
+    maior = "MAC";
+  } else if (linux.length > w10.length && linux.length > mac.length) {
+    maior = "Linux";
+  } else {
+    maior = "Tivemos um empate";
+  }
+
+  print("O sitema operacional mais usado foi o $maior");
+  print("Votos = $w10");
+  print("Votos = $linux");
+  print("Votos = $mac");
 }
