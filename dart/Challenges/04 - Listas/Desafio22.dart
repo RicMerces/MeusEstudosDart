@@ -13,19 +13,19 @@ void main() {
 
   print("Informe a quantidade de limpezas");
   var limpezas = stdin.readLineSync()!;
-  double limpeza = double.parse(esferas);
+  double limpeza = double.parse(limpezas);
 
   print("Informe a quantidade de esferas");
   var trocas = stdin.readLineSync()!;
-  double troca = double.parse(esferas);
+  double troca = double.parse(trocas);
 
   print("Informe a quantidade de esferas");
   var quebrados = stdin.readLineSync()!;
-  double quebrado = double.parse(esferas);
+  double quebrado = double.parse(quebrados);
 
   double soma = quebrado + troca + esfera + limpeza;
 
-  while (soma != qtd) {
+  while (soma > qtd) {
     print("\n VALORES NÃO CORRESPONDEM A QUANTIDADE $qtd");
     print("Informe a quantidade de esferas");
     var esferas = stdin.readLineSync()!;
@@ -35,11 +35,11 @@ void main() {
     var limpezas = stdin.readLineSync()!;
     limpeza = double.parse(esferas);
 
-    print("Informe a quantidade de esferas");
+    print("Informe a quantidade de trocas");
     var trocas = stdin.readLineSync()!;
     troca = double.parse(esferas);
 
-    print("Informe a quantidade de esferas");
+    print("Informe a quantidade de quebrados");
     var quebrados = stdin.readLineSync()!;
     quebrado = double.parse(esferas);
 
