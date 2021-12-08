@@ -1,15 +1,59 @@
 import 'dart:io';
 
 void main() {
-// Sua organização acaba de contratar um estagiário para trabalhar no Suporte de Informática, com a intenção de fazer um levantamento nas sucatas encontradas nesta área. A primeira tarefa dele é testar todos os cerca de 200 mouses que se encontram lá, testando e anotando o estado de cada um deles, para verificar o que se pode aproveitar deles.
-// Foi requisitado que você desenvolva um programa para registrar este levantamento. O programa deverá receber um número indeterminado de entradas, cada uma contendo: um número de identificação do mouse o tipo de defeito:
-// necessita da esfera;
-// necessita de limpeza; a.necessita troca do cabo ou conector; a.quebrado ou inutilizado Uma identificação igual a zero encerra o programa. Ao final o programa deverá emitir o seguinte relatório:
-// Quantidade de mouses: 100
+  print("Iforme quatidade de mouses");
+  var quantidade = stdin.readLineSync()!;
+  double qtd = double.parse(quantidade);
 
-// Situação                        Quantidade              Percentual
-// 1- necessita da esfera                  40                     40%
-// 2- necessita de limpeza                 30                     30%
-// 3- necessita troca do cabo ou conector  15                     15%
-// 4- quebrado ou inutilizado              15                     15%
+  print("");
+
+  print("Informe a quantidade de esferas");
+  var esferas = stdin.readLineSync()!;
+  double esfera = double.parse(esferas);
+
+  print("Informe a quantidade de limpezas");
+  var limpezas = stdin.readLineSync()!;
+  double limpeza = double.parse(esferas);
+
+  print("Informe a quantidade de esferas");
+  var trocas = stdin.readLineSync()!;
+  double troca = double.parse(esferas);
+
+  print("Informe a quantidade de esferas");
+  var quebrados = stdin.readLineSync()!;
+  double quebrado = double.parse(esferas);
+
+  double soma = quebrado + troca + esfera + limpeza;
+
+  while (soma != qtd) {
+    print("\n VALORES NÃO CORRESPONDEM A QUANTIDADE $qtd");
+    print("Informe a quantidade de esferas");
+    var esferas = stdin.readLineSync()!;
+    esfera = double.parse(esferas);
+
+    print("Informe a quantidade de limpezas");
+    var limpezas = stdin.readLineSync()!;
+    limpeza = double.parse(esferas);
+
+    print("Informe a quantidade de esferas");
+    var trocas = stdin.readLineSync()!;
+    troca = double.parse(esferas);
+
+    print("Informe a quantidade de esferas");
+    var quebrados = stdin.readLineSync()!;
+    quebrado = double.parse(esferas);
+
+    soma = quebrado + troca + esfera + limpeza;
+  }
+
+  double porcentagem1 = (100 * esfera) / soma;
+  double porcentagem2 = (100 * limpeza) / soma;
+  double porcentagem3 = (100 * troca) / soma;
+  double porcentagem4 = (100 * quebrado) / soma;
+
+  print("Total 100% = $qtd");
+  print("Esferas = $esfera = $porcentagem1%");
+  print("Limpezas = $limpeza = $porcentagem2%");
+  print("Troca = $troca = $porcentagem3%");
+  print("Quebrado = $quebrado = $porcentagem4%");
 }
