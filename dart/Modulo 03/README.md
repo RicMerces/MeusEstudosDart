@@ -29,3 +29,21 @@ void subtrairNumeros(valorX, varlorY){
 }
 
 ```
+Nesse exemplo não um retorno de valor, pois usamos o tipo **void** para as funções chamadas na main.
+
+Mas para que serve o *retorno* ? 
+O retorno armazena o valor que esta sendo retornado na Função quando ela é chamada.
+
+Na **void** apenas ocorre um print da ocasião interna mas não armazena o valor.
+
+```dart
+
+void main(){
+    realizarSoma(1, 2);
+}
+
+int realizarSoma (int v1, int v2){
+    int soma = v1 + v2;
+    return soma;
+}
+````
