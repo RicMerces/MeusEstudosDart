@@ -47,3 +47,27 @@ int realizarSoma (int v1, int v2){
     return soma;
 }
 ````
+
+#### Parametros Opcionnais
+
+```dart
+void main(){
+    rodar(x , y);
+}
+
+int rodar ([int valor], int valory){
+
+}
+```
+
+
+#### Parametros Nomeados
+```
+void main(){
+    rodar(y);
+}
+
+int rodar (int x = 10, int y){
+
+}
+```
