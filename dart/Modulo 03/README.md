@@ -122,3 +122,20 @@ main(){
 }
 
 ```
+
+#### Funções passadas como parametro
+
+```dart 
+
+import 'dart:math';
+
+void executar(Function fnPar, Function fnImpart){
+    Random().nextInt(10) % 2 == 0 ? fnPar() : fnImpar();
+}
+
+main(){
+    var minhaFnPar = () => print('VALOR É PAR');
+    var minhaFnImpar = () => print('VALOR IMPAR');
+
+    executar(fnImpar: minhaFnImpar, fnPar: minhaFnPar)
+}
