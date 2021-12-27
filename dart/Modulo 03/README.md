@@ -161,7 +161,7 @@ funcao(p1,p2){
     funcao(3, 19)
 ```
 
-#### para otimizar
+##### para otimizar
 ```
 fucaoFora(p1){
     //10 -> p1
@@ -180,4 +180,23 @@ var funcaoForaComParam3 = fucaoFora(3)
 funcaoForaComParam3(17)
 funcaoForaComParam3(18)
 funcaoForaComParam3(19)
+```
+##### em dart
+
+```dart
+int Function(int) somaParcial(int a){
+    int c = 0;
+    return (int b){
+        return a + b + c;
+    };
+}
+main(){
+    print(somaParcial(2)(10));
+
+    var somaCom10 = somaParcial(10);
+
+    print(somaCom10(3));
+    print(somaCom10(7));
+    print(somaCom10(10));
+}
 ```
