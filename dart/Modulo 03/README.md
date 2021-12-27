@@ -102,3 +102,23 @@ main(){
 }
 ```
 
+#### Funções arrow =>
+```dart
+
+main(){
+    var adicao = (int a, int b){
+        return a + b;
+    };
+
+    print(adicao(4, 19));
+
+    var subtracao = (int a, int b) => a - b;
+    print(subtracao(4, 19));
+
+    var divisao = (int a, int b) => {
+        return a / b;
+    }
+    print(divisao(4,2) is set); //True
+}
+
+```
