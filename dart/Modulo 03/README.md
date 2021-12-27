@@ -137,5 +137,47 @@ main(){
     var minhaFnPar = () => print('VALOR É PAR');
     var minhaFnImpar = () => print('VALOR IMPAR');
 
-    executar(fnImpar: minhaFnImpar, fnPar: minhaFnPar)
+    executar(fnImpar: minhaFnImpar, fnPar: minhaFnPar);
 }
+```
+
+#### Funções Retornando outras Funções
+```
+funcao(p1,p2){
+     //10 -> p1
+    sentenca #01
+    sentenca #02
+    sentenca #03
+
+    
+    // 1s -> p2
+    sentennca #04
+    senntenca #05
+  
+}
+
+    funcao(3, 17)
+    funcao(3, 18)
+    funcao(3, 19)
+```
+
+#### para otimizar
+```
+fucaoFora(p1){
+    //10 -> p1
+    sentenca #01
+    sentenca #02
+    sentenca #03
+
+    return(p2){
+        // 1s -> p2
+        sentennca #04
+        senntenca #05
+    }
+}
+
+var funcaoForaComParam3 = fucaoFora(3) 
+funcaoForaComParam3(17)
+funcaoForaComParam3(18)
+funcaoForaComParam3(19)
+```
