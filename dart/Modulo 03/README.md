@@ -62,7 +62,7 @@ int rodar ([int valor], int valory){
 
 
 #### Parametros Nomeados
-```
+```dart
 void main(){
     rodar(y);
 }
@@ -71,3 +71,34 @@ int rodar (int x = 10, int y){
 
 }
 ```
+
+#### Funções em variaveis
+
+```dart
+
+main(){
+
+    int a = 2;
+    int soma(int a, int b){
+        return a + b;
+    }
+
+    //Tipo nome = valor;
+    int function(int,int) soma1 = somaFn;
+    print(soma1(soma1(20,313)));
+
+}
+
+```
+
+#### Funções anonimas 
+```dart 
+
+main(){
+    int Function(int, int) soma2 = (x,y){
+        return x + y;
+    }
+    print(soma2(20,313)));
+}
+```
+
