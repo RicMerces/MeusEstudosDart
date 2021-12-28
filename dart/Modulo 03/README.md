@@ -347,3 +347,30 @@ double somar (double a, double b){
     // elemento = b
     return a + b;
 }
+```
+
+
+MAP & REDUCE
+```dart
+main(){
+    var alunos =[
+        {'nome': 'Ricardo', 'nota': 8.0},
+        {'nome': 'Bruno', 'nota': 10.0},
+        {'nome': 'Carlos', 'nota': 9.0},
+        {'nome': 'Eduardo', 'nota': 8.9},
+        {'nome': 'GuilhermeF', 'nota': 7.0},
+        {'nome': 'Caio', 'nota': 9.4},
+        {'nome': 'Gustavo', 'nota': 5.7},
+        {'nome': 'GuilhermeP', 'nota': 4.9}
+    ];
+
+    var total = alunos
+        .map((aluno) => aluno['nota'])
+        .map((nota) => (nota as double).roundToDouble())
+        .where((nota) => nota >= 8);
+
+    var total = notasFinais.reduce((t,a) => t + a);
+    print('O valor da media é ${total / notasFinais}');
+}
+
+```
