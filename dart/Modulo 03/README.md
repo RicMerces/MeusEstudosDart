@@ -226,7 +226,7 @@ main(){
 #### Filter
 
 
-Abordagem procedural
+Abordagem Procedural
 ```dart
 main(){
     var notas = [8.2, 7.1, 7.8, 3.9, 1.0,5.1];
@@ -243,3 +243,19 @@ main(){
 
 ```
 
+Abordagem Funcional
+```dart 
+main(){
+    
+    var notas = [8.2, 7.1, 7.8, 3.9, 1.0,5.1];
+
+    bool Function(double) notasBoasFn = (double nota) => nota >= 7;
+    bool Function(double) notasMuitoBoasFn = (double nota) => nota >= 8.8;
+
+    var notasBoas = notas.where(notasBoasFn);
+    var notasMuitoBoas = notas.where(notasMuitoBoasFn);
+    print(notas);
+    print(notasBoas);
+    print(notasMuitoBoas);
+
+}
