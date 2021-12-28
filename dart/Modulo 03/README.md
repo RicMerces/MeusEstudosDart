@@ -259,3 +259,29 @@ main(){
     print(notasMuitoBoas);
 
 }
+```
+
+Função Filtrar
+
+```dart
+List<E> filtrar<E>(List<E> lista, bool Function(E) fn){
+    List<E> listaFiltrada = [];
+
+    for(E elemento in lista){
+        if(fn(elemento in lista)){
+            if(fnn(elemento)){
+                listaFiltrada.add(elemento);
+            }
+        }
+    }
+    return listaFiltrada;
+} 
+
+main(){
+    var notas = [8.8, 7.3,9.0,3.0];
+    var boasNotasFn = (double nota) => nota >= 8.0;
+
+    var somenteNotasBoas = filtrar<double>(notas, boasNotasFn);
+    print(somenteNotasBoas);
+}
+```
