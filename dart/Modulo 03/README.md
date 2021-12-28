@@ -284,4 +284,32 @@ main(){
     var somenteNotasBoas = filtrar<double>(notas, boasNotasFn);
     print(somenteNotasBoas);
 }
+``` 
+
+#### Map & Reduce
+
+```dart 
+main(){
+    var alunos =[
+        {'nome': 'Ricardo', 'nota': 8.0},
+        {'nome': 'Bruno', 'nota': 10.0},
+        {'nome': 'Carlos', 'nota': 9.0},
+        {'nome': 'Eduardo', 'nota': 8.9},
+        {'nome': 'GuilhermeF', 'nota': 7.0},
+        {'nome': 'Caio', 'nota': 9.4},
+        {'nome': 'Gustavo', 'nota': 5.7},
+        {'nome': 'GuilhermeP', 'nota': 4.9}
+    ];
+
+
+    String Functionn(Map) pegarApenasONome = (aluno) => aluno['nome'];
+    int Function(String) qtdDeLetras = (texto) => texto.length;
+    
+    var nomes = alunos.map(pegarApenasONome);
+    var quantidadeDeLetras = nomes.map(qtdDeLetras);
+
+    print(nomes);
+    print(quantidadeDeLetras);
+}
+
 ```
