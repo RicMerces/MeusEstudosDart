@@ -222,3 +222,24 @@ main(){
 }
 
 ```
+
+#### Filter
+
+
+Abordagem procedural
+```dart
+main(){
+    var notas = [8.2, 7.1, 7.8, 3.9, 1.0,5.1];
+
+    var notasBoas = [];
+
+    for(var nota in notas){
+        if(nota >= 7){
+            notasBoas.add(nota); 
+        }
+    }
+    print(notasBoas);
+}
+
+```
+
