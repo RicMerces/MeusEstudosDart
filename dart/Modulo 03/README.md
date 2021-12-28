@@ -288,6 +288,8 @@ main(){
 
 #### Map & Reduce
 
+
+Map
 ```dart 
 main(){
     var alunos =[
@@ -308,8 +310,40 @@ main(){
     var nomes = alunos.map(pegarApenasONome);
     var quantidadeDeLetras = nomes.map(qtdDeLetras);
 
+    //Outra maneira
+
+    var quantidadeDeLetras = alunos
+        .map(pegarApenasONome)
+        .map(qtdDeLetras);
+
     print(nomes);
     print(quantidadeDeLetras);
 }
 
 ```
+Reduce
+
+```dart
+main(){
+    var notas = [7.2, 5.2,7.7,8.1,9.1];
+    var total = 0;
+
+    for(var nota in notas){
+        total += nota;
+    }
+
+    print(total);
+
+    //Reduce
+
+    var total = notas.reduce(somar);
+
+    print(total);
+}
+
+double somar (double a, double b){
+    //TIPOS DEVEM SER IGUAIS
+    // acumulador = a
+    // elemento = b
+    return a + b;
+}
