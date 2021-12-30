@@ -1,4 +1,8 @@
 # Desafios de Logica de Programação
++ 
+# Programação Orientada a Objetos 
++
+# Estrutura de dados
 ### Do zero ao infinito 🚀
 ```
 Com o objetivo de sanar minhas fraquezas em programação vou 
