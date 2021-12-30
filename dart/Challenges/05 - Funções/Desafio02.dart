@@ -7,20 +7,14 @@ void main() {
   imprimir(n);
 }
 
-String imprimir(int limite) {
-  int numero = 0;
+void imprimir(int limite) {
   int x = 0;
   String sText = '';
   var text = '';
-  for (int i = 0; i >= limite; i++) {
-    numero++;
-    for (int z = 0; z >= numero; z++) {
-      x++;
-      text = '$x' + ' $sText';
-      sText = text;
-      print(text);
-    }
-    print("\n");
+  for (int i = 0; i < limite; i++) {
+    x++;
+    text = '$sText ' + '$x';
+    sText = text;
+    print(text);
   }
-  return text;
 }
