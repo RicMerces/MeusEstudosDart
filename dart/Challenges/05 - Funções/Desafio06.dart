@@ -1,11 +1,17 @@
 import 'dart:io';
 
 void main() {
+  receberDados();
+}
+
+String receberDados(){
   print("Informe o horario de agora");
   var horario = stdin.readLineSync()!;
-  // validacao(horario);
-  horas(horario);
+  validacao(horario);
+
+  return horario;
 }
+
 
 String horas(String h) {
   h.split('');
@@ -17,3 +23,15 @@ String horas(String h) {
   print(h);
   return h;
 }
+
+
+String validacao (String h){
+  while(h.length > 5){
+    receberDados();
+  }
+  var hora = h.split('');
+  String n = hora[0] + hora[1];
+  while()
+}
+
+
