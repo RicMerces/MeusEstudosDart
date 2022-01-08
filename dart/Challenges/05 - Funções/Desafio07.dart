@@ -1,24 +1,24 @@
 import 'dart:io';
 
 void main() {
-  valorPagamento();
+  imprimir();
 }
 
-String valorPagamento() {
-  print("Determine o valor a ser pago");
-  var valor = stdin.readLineSync()!;
+String imprimir() {
+  String valorFinal = '';
 
-  print("Houve atraso ? \nDIGITE:\ns\nn");
-  var j = stdin.readLineSync()!;
+  print("Informe o valor a ser pago");
 
-  while (j != 's' || j != 'n') {
-    print("RESPOSTA INVALIDA");
-    print("Houve atraso ? \nDIGITE:\ns\nn");
-    var j = stdin.readLineSync()!;
-  }
-  if (j == 's') {
-    atrasar();
-  }
+  print("Informe o prazo para ser entregue ");
+  var day = stdin.readLineSync()!;
 
-  return valor;
+  prazo(day);
+
+  print("Em quantas vezes X você parcelou ");
+  var parcelas = stdin.readLineSync()!;
+  parcelamento(int.parse(parcelas));
+
+  return valorFinal;
 }
+
+double parcelamento(int x) {}
