@@ -1,24 +1,22 @@
 import 'dart:io';
 
 void main() {
-  imprimir();
+  valorPrestacao();
 }
 
-String imprimir() {
-  String valorFinal = '';
+double valorPrestacao() {
+  double valorMensal;
+  print("Informe o valor do produto");
+  var valor = stdin.readLineSync()!;
+  double vp = double.parse(valor);
 
-  print("Informe o valor a ser pago");
+  print("Informe em quantas vezes você dividiu");
+  var vezes = stdin.readLineSync()!;
+  int xp = int.parse(vezes);
 
-  print("Informe o prazo para ser entregue ");
-  var day = stdin.readLineSync()!;
+  valorMensal = calcularValorMensal(vp, xp);
 
-  prazo(day);
-
-  print("Em quantas vezes X você parcelou ");
-  var parcelas = stdin.readLineSync()!;
-  parcelamento(int.parse(parcelas));
-
-  return valorFinal;
+  return valorMensal;
 }
 
-double parcelamento(int x) {}
+double calcularValorMensal(double vp, int xp) {}
