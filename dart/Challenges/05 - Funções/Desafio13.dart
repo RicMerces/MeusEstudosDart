@@ -24,7 +24,13 @@ String gerarLinhas(String x1, String y1, String z1) {
   int y = int.parse(y1);
   int z = int.parse(z1);
 
-  primeiraLinha(x, y, z);
+  String l1 = primeiraLinha(x, y, z);
+  var xs = l1.split('  ');
+  int x2 = int.parse(xs[1]);
+  int x3 = int.parse(xs[2]);
+
+  String l2 = segundaLinha(x, y, z, x2, x3);
+  String l3 = terceiraLinha(x, y, z);
 }
 
 String primeiraLinha(int x, int y, int z) {
@@ -35,15 +41,9 @@ String primeiraLinha(int x, int y, int z) {
 }
 
 String segundaLinha(int x, int y, int z) {
-  int e1 = x - y;
-  int e2 = e1 - (x + y + z);
-
-  return '$x  $e1  $e2';
+  return '$e1  $y  $e2';
 }
 
 String terceiraLinha(int x, int y, int z) {
-  int e1 = x - y;
-  int e2 = e1 - (x + y + z);
-
-  return '$x  $e1  $e2';
+  return '$e1  $e2  $z';
 }
