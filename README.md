@@ -1,21 +1,6 @@
 <h1 align="center"><img src="https://iconape.com/wp-content/files/yb/61798/svg/flutter-logo.svg" height="60px" > Flutter </h1> 
 
 
-### CheckList
-
-- Estrutura Sequencial ✔️
-- Estrutura Condicional ✔️
-- Estrutura de Repetição ✔️
-- Listas ✔️
-- Funções ✔️
-- MAP & Reduce 🏇
-- Filter 🚩
-- Programação Orientada a Objetos 🚩
-
-
-
-
-
 ### O que é o Flutter ?
 Flutter nada mais é que uma ferramenta que permite que você programando em uma linguagem consiga gerar codigos para as linguagens nativas usando apenas **UM CODIGO FONTE**. Escrito na linguagem **Dart** ele transpila para as plataformas **Android** e **IOS** para suas respectivas Linguagens (Java/Kotlin) + (Objetive-C/Switft).
 

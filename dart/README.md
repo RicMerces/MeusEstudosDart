@@ -1,6 +1,21 @@
 <h1 align="center"><img src="https://camo.githubusercontent.com/831fcb3aa1e35685a351128ada1c6555843bc0220020b74fbb1a50f7b91b077f/68747470733a2f2f6477676c6f676f2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f30332f446172745f6c6f676f2e706e67"  height="80px" > DART </h1> 
 
 
+### CheckList
+
+- Estrutura Sequencial ✔️
+- Estrutura Condicional ✔️
+- Estrutura de Repetição ✔️
+- Listas ✔️
+- Funções ✔️
+- MAP & Reduce 🏇
+- Filter 🚩
+- Programação Orientada a Objetos 🚩
+
+
+
+
+
 ## Estrutura Inicial 
 
 ### Olá Mundo !
