@@ -16,6 +16,8 @@ String adicionarNaLista(int v, List lista) {
   lista.add(v);
 
   String resultado = 'A Lista final = $lista';
-  print(resultado);
+  if (lista.length == 5) {
+    print(resultado);
+  }
   return resultado;
 }
