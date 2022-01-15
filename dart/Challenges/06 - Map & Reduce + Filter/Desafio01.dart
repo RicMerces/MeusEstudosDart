@@ -1,26 +1,19 @@
 import 'dart:io';
 
 void main() {
-  receberValores();
-}
+  for (int i = 0; i < 5; i++) {
+    print("Informe o ${i + 1}º valor da lista");
+    var valor = stdin.readLineSync()!;
+    int v = int.parse(valor);
 
-String receberValores() {
-  print("Informe a quantidade de valores");
-  var v = stdin.readLineSync()!;
-
-  validacao(v);
-
-  return v;
-}
-
-bool validacao(String v) {
-  if (int.parse(v) == true) {
-    iniciarPrograma(int.parse(v));
-  } else {
-    receberValores();
+    adicionarNaLista(v);
   }
-
-  return true;
 }
 
-List iniciarPrograma(String v) {}
+String adicionarNaLista(int v) {
+  List lista = [];
+  lista.add(v);
+
+  String resultado = 'A Lista final = $lista';
+  return resultado;
+}
