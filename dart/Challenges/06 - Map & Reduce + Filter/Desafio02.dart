@@ -8,24 +8,26 @@ void main() {
 
 String informeOsValores() {
   String resultado = '';
+  List lista = [];
   for (int i = 0; i < 10; i++) {
     print("Informe o ${i + 1} valor");
     var v = stdin.readLineSync()!;
 
-    resultado = adicionarALista(int.parse(v), i);
+    resultado = adicionarALista(int.parse(v), lista);
   }
 
   return resultado;
 }
 
-String adicionarALista(int valor, int cont) {
+String adicionarALista(int valor, lista) {
   String resultado = '';
-  List lista = [];
+
   lista.add(valor);
 
-  if (cont == 9) {
+  if (lista.length == 10) {
     resultado = imprimir(lista);
   }
+  // print(lista);
   return resultado;
 }
 
@@ -33,7 +35,7 @@ String imprimir(List l) {
   String texto = '';
   String aux = '';
   for (int i = 0; i < l.length; i++) {
-    texto = aux + l[i];
+    texto = '${l[i]} $aux';
     aux = texto;
   }
   print("$texto");
