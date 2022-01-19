@@ -10,8 +10,10 @@ String imprimir() {
 
   List resultados = informeNotas();
 
-  print(resultados);
-  return resultados;
+  double media = calcularMedia(resultados);
+
+  print('$nome, Sua média final foi $media');
+  return '$nome, Sua média final foi $media';
 }
 
 String informeNome() {
@@ -26,7 +28,20 @@ List informeNotas() {
     print("Informe a nota do ${i + 1} Bimestre");
     var nota = stdin.readLineSync()!;
 
-    notas.add(int.parse(nota));
+    notas.add(double.parse(nota));
   }
   return notas;
+}
+
+double calcularMedia(List l) {
+  double r = 0;
+  double aux = 0;
+  for (int i = 0; i < l.length; i++) {
+    r = aux + l[i];
+    aux = r;
+    if (i == l.length - 1) {
+      r = r / l.length;
+    }
+  }
+  return r;
 }
