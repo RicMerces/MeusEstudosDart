@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  imprimir();
+  print(imprimir());
 }
 
 String imprimir() {
@@ -12,8 +12,9 @@ String imprimir() {
 
   double media = calcularMedia(resultados);
 
-  print('$nome, Sua média final foi $media');
-  return '$nome, Sua média final foi $media';
+  String passou = verAprovacao(media);
+
+  return '$nome, Sua média final foi $media, logo você foi $passou';
 }
 
 String informeNome() {
@@ -44,4 +45,14 @@ double calcularMedia(List l) {
     }
   }
   return r;
+}
+
+String verAprovacao(double media) {
+  String valor = '';
+  if (media >= 7) {
+    valor = 'APROVADO';
+  } else {
+    valor = 'REPROVADO';
+  }
+  return valor;
 }
