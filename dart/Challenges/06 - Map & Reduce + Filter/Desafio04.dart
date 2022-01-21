@@ -49,7 +49,7 @@ String contadorDeConsoantes(String f) {
 
 List verificar(List c, String f, List listas) {
   for (int i = 0; i < c.length; i++) {
-    if (f == c[i]) {
+    if (f.toUpperCase() == c[i]) {
       listas.add(f);
     }
   }
