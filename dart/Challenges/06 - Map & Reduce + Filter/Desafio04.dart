@@ -1,19 +1,26 @@
 import 'dart:io';
 
 void main() {
-  informarFrase();
+  informar();
 }
 
-String informarItens() {
-  print("Informe uma frase");
-  var frase = stdin.readLineSync()!;
-  List caracteres = frase.split('');
-  contadorDeConsoantes(caracteres);
+String informar() {
+  print("Informe uma palavra");
+  String frase = stdin.readLineSync()!;
+
+  contadorDeConsoantes(frase);
 }
 
-int contadorDeConsoantes(List caracteres) {
-    for(int i =0; i > caracteres.length){
+String contadorDeConsoantes(String f) {
+  List consoantes = [B,C,D,F,G,H,J,K,L,M,N,P,Q,R,S,T,V,W,X,Y,Z];
 
+  var frase = f.split('');
+  for (int i =0; i < f.length; i++){
+    while(frase[i] in consoantes ){
+      
     }
+  }
+
+
 
 }
