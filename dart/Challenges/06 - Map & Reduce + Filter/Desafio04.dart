@@ -14,6 +14,7 @@ String informar() {
 }
 
 String contadorDeConsoantes(String f) {
+  List listas = [];
   List consoantes = [
     'B',
     'C',
@@ -39,20 +40,19 @@ String contadorDeConsoantes(String f) {
   ];
   List ListaFinal = [];
   var frase = f.split('');
-  for (int i = 0; i < f.length; i++) {
-    ListaFinal = verificar(consoantes, frase[i]);
+  for (int i = 0; i < frase.length; i++) {
+    ListaFinal = verificar(consoantes, frase[i], listas);
   }
   String resultado = 'Os valores finais = ${ListaFinal}';
   return resultado;
 }
 
-List verificar(List c, String f) {
-  List listaFinal = [];
+List verificar(List c, String f, List listas) {
   for (int i = 0; i < c.length; i++) {
     if (f == c[i]) {
-      listaFinal.add(f);
+      listas.add(f);
     }
   }
 
-  return listaFinal;
+  return listas;
 }
