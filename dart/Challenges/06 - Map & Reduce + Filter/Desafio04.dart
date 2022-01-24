@@ -43,7 +43,8 @@ String contadorDeConsoantes(String f) {
   for (int i = 0; i < frase.length; i++) {
     ListaFinal = verificar(consoantes, frase[i], listas);
   }
-  String resultado = 'Os valores finais = ${ListaFinal}';
+  String resultado =
+      'Os valores finais = ${ListaFinal} e a quantidade de consoantes = ${ListaFinal.length}';
   return resultado;
 }
 
