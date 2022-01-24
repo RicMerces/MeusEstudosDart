@@ -7,24 +7,29 @@ void main() {
 String informarNumeros() {
   List impares = [];
   List pares = [];
-
-  for (int i = 0; i < 20; i++) {
+  String valicao = '';
+  for (int i = 0; i < 4; i++) {
     print("Informe o ${i + 1}º numero");
     var num = stdin.readLineSync()!;
-    validar(int.parse(num), impares, pares);
+    valicao = validar(int.parse(num), impares, pares);
   }
+  print(valicao);
+  return valicao;
 }
 
 String validar(int num, List impares, List pares) {
+  List par = [];
+  List impar = [];
+
   if (num % 2 == 0) {
-    addPares(num, pares);
+    par = addPares(num, pares);
   } else if (num % 2 != 0) {
-    addImpares(num, impares);
+    impar = addImpares(num, impares);
   } else {
     informarNumeros();
   }
 
-  return informa
+  return 'Pares = $par \nImpares = $impar';
 }
 
 List addImpares(int n, List imp) {
