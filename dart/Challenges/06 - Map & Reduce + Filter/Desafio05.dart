@@ -19,17 +19,18 @@ String informarNumeros() {
 
 String validar(int num, List impares, List pares) {
   List par = [];
-  List impar = [];
+  List impars = [];
 
   if (num % 2 == 0) {
     par = addPares(num, pares);
+    print(par);
   } else if (num % 2 != 0) {
-    impar = addImpares(num, impares);
-  } else {
-    informarNumeros();
+    impars = addImpares(num, impares);
+    print(impars);
   }
-
-  return 'Pares = $par \nImpares = $impar';
+  print(par);
+  print(impars);
+  return 'Pares = $par \nImpares = $impars';
 }
 
 List addImpares(int n, List imp) {
