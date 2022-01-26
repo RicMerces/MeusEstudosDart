@@ -1,17 +1,16 @@
 import 'dart:io';
 
 void main() {
-  imprimir();
+  print(imprimir());
 }
 
 Map informeDados(Map alunos) {
   print("Informe seu nome ");
   var nome = stdin.readLineSync()!;
-  double media = calcularMedia();
+  double media = calcularMedia() / 4;
   alunos['$nome'] = media;
 
-  String 
-  return nome;
+  return alunos;
 }
 
 String imprimir() {
@@ -19,6 +18,8 @@ String imprimir() {
   for (int i = 0; i < 10; i++) {
     informeDados(alunos);
   }
+
+  return '$alunos';
 }
 
 double calcularMedia() {
