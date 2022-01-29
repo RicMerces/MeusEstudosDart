@@ -1,44 +1,25 @@
 import 'dart:io';
 
 void main() {
-  informarNumeros();
+  informeValores();
 }
 
-String informarNumeros() {
-  List impares = [];
-  List pares = [];
-  String valicao = '';
-  for (int i = 0; i < 4; i++) {
-    print("Informe o ${i + 1}º numero");
-    var num = stdin.readLineSync()!;
-    valicao = validar(int.parse(num), impares, pares);
-  }
-  print(valicao);
-  return valicao;
-}
-
-String validar(int num, List impares, List pares) {
+String informeValores() {
   List par = [];
-  List impars = [];
+  List impar = [];
+  for (int i = 0; i < 4; i++) {
+    print("Informe um valor ");
+    var v = stdin.readLineSync()!;
 
-  if (num % 2 == 0) {
-    par = addPares(num, pares);
-    print(par);
-  } else if (num % 2 != 0) {
-    impars = addImpares(num, impares);
-    print(impars);
+    if (int.parse(v) % 2 == 0) {
+      par.add(int.parse(v));
+    } else {
+      impar.add(int.parse(v));
+    }
   }
-  print(par);
-  print(impars);
-  return 'Pares = $par \nImpares = $impars';
-}
 
-List addImpares(int n, List imp) {
-  imp.add(n);
-  return imp;
-}
+  String valor = "Par = $par\nImpar = $impar";
+  print(valor);
 
-List addPares(int n, List par) {
-  par.add(n);
-  return par;
+  return valor;
 }
