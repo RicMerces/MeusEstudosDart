@@ -7,7 +7,7 @@ void main() {
 String informarValores() {
   Map identidade = {};
 
-  for (int i = 0; i < 1; i++) {
+  for (int i = 0; i < 5; i++) {
     print("Informe seu nome");
     String nome = stdin.readLineSync()!;
 
