@@ -12,6 +12,7 @@ String informeDadosAlunos() {
 
   List alertAlunos = [];
 
+  String resultado = '';
   for (int i = 0; i < 4; i++) {
     print("Informe nome do aluno ");
     var nome = stdin.readLineSync()!;
@@ -30,10 +31,19 @@ String informeDadosAlunos() {
 
     dadosAlunos[nome] = ' | Idade = $idade | Altura = $h | ';
 
-    verificar(alertAlunos, nome, id, h);
+    resultado = '${verificar(alertAlunos, nome, id, h)}';
   }
+
+  resultado =
+      'A lista de alunos da turma = $dadosAlunos\nAlunos que estão abaixo da media de 1.50m com mais de 13 anos $resultado e quantidade  ${alertAlunos.length}';
+
+  print(resultado);
+  return resultado;
 }
 
 List verificar(List alunos, String nome, int id, double h) {
+  if (id >= 13 && h < 1.50) {
+    alunos.add(nome);
+  }
   return alunos;
 }
