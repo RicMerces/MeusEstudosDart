@@ -35,5 +35,43 @@ main(){
 Os atributos são ferramentas onde criamos tipos dentro de uma classe onde, podemos reutilizar em outra ocasião para modelar os dados.
 
 
+### Metodos dentro das classes
+Para evitar grandes interpolações e repetições cansativas, podemos usar a ferramenta de funções dentro de uma classe : 
 
+```dart 
+class DataSimples{
+    //Atributos
+    int dia;
+    int mes;
+    int ano;
 
+    //Metodos
+    String obterFormatacao(){
+        return ("$dia / $mes / $ano");
+    }
+    
+    String toString(){
+        return 'O dia $obterFormatacao !'
+    }
+}
+
+main(){
+
+    var dataAniversario = new DataSimples();
+    dataAniversario.dia = 7;
+    dataAniversario.mes = 3;
+    dataAniversario.ano = 2002;
+
+    Data dataCompra = Data();
+    dataCompra.dia = 7;
+    dataCompra.mes = 3;
+    dataCompra.ano = 2002;
+     
+    String d1 = dataAniversario.obterFormatacao();
+    String d2 = dataCompra.obterFormatacao();
+
+    print("$d1\n$d2");
+
+}
+```
+O toString converte os prints em Strings automaticamente 
