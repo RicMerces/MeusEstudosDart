@@ -135,3 +135,31 @@ Construtores Nomeados
     //Em outra classe
     print(Data.com(ano: 2022));
 ```
+
+Construtores Nomeados e parametros posicionais
+```dart
+    Data.ultimoDiaDoAno(this.ano){
+        dia = 31;
+        dia = 12;
+    }     
+```
+
+### Import
+Criando duas classes na mesma pasta temos como importar os valores e funções de uma classe para a outra : 
+
+**Classe main**
+```dart
+    //Classe Main
+    import './pessoa.dart';
+    main(){
+        var p1 = Pessoa();
+        p1.nome = 'Haroldo';
+
+        print('O nome da pessoa é ${p1.nome}.');
+    }
+```
+
+**Classe pessoa**
+```dart
+    String nome;
+```
