@@ -163,3 +163,5 @@ Criando duas classes na mesma pasta temos como importar os valores e funções d
 ```dart
     String nome;
 ```
+
+Se for importar de outra pasta use './nomedapasta/nomedaclasse'.
