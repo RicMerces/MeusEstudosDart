@@ -165,3 +165,40 @@ Criando duas classes na mesma pasta temos como importar os valores e funções d
 ```
 
 Se for importar de outra pasta use './nomedapasta/nomedaclasse'.
+
+### Objetos Privados
+
+ *_exemploDeObjetoPrivado* sendo possivel acessar apenas no mesmo arquivo, em outras classes não pode ser acessado
+
+Como resolveriamos, usamos Objetos Privados por segurança de não haver a passagem de metodos com facilidade dentro de qualquer classe, logo usamos então o metodo **get e set** para haver o intermedio dessa passagem para se decidir o que se pode e não pode ser passado para outra classe.
+
+### Get
+Ele pega os valores e apresenta fazendo return dos valores do Objeto Privado
+```dart
+int _velocidadeAtual = 0;
+
+int get velocidadeAtual {
+    return this._velocidadeAtual;
+}
+```
+### Set
+Ele pega e pode alterar os valores
+```dart 
+int _velocidadeAtual = 0;
+
+int get velocidadeAtual {
+    return this._velocidadeAtual;
+}
+
+void set velocidadeAtual (int novaVelocidade){
+    this._velocidadeAtual = novaVelocidade;
+}
+```
+Aplicando mais validações com metodos get e set 
+```dart
+void set velocidadeAtual(int novaVelocidade){
+    bool deltaValido = (_velocidadeAtual - novaVelocidade) <= 5;
+    if(deltaValido){
+        this._velocidade = novaVelocidade;
+    }
+}
