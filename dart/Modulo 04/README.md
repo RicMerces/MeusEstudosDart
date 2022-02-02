@@ -75,3 +75,44 @@ main(){
 }
 ```
 O toString converte os prints em Strings automaticamente 
+
+### Construtores
+
+Contrutor Padrão
+```dart
+    var dataAniversario = new Data();
+```
+
+Construtor com Parametro
+
+```dart
+    class data{
+        int dia;
+        int mes;
+        int ano;
+
+        Data(int diaIni, int mesIni, int anoIni){
+            dia = diaIni;
+            mes = mesIni;
+            ano = anoIni;
+        }
+    }
+
+    main(){
+        var dataAniversario = new Data(7,3,2002);
+        
+        //Setando de forma explicita
+        dataCompra.dia = 7;
+        dataCompra.mes = 3;
+        dataCompra.ano = 2002;  
+    }
+
+```
+Construtor usando o This
+
+```dart
+    Data(int dia, int mes, int ano){
+            this.dia = dia;
+            this.mes = mes;
+            this.ano = ano;
+        }
