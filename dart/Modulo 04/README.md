@@ -116,3 +116,22 @@ Construtor usando o This
             this.mes = mes;
             this.ano = ano;
         }
+```
+
+Construtor simples
+```dart
+    Data(this.dia, this.mes, this.ano);
+```
+
+Construtores Opcionais
+```dart
+    Data(this.dia,[ this.mes, this.ano]);
+```
+
+Construtores Nomeados
+```dart
+    Data.com({this.dia = 1, this.mes = 1, this.ano = 1970});
+
+    //Em outra classe
+    print(Data.com(ano: 2022));
+```
