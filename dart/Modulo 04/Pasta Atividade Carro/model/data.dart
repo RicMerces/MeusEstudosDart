@@ -21,7 +21,7 @@ class Data {
   bool estaNoLimite() {
     bool l = false;
 
-    if (velocidadeAtual == velocidadeMax) {
+    if (this.velocidadeAtual == this.velocidadeMax) {
       l = true;
     }
 
@@ -29,4 +29,14 @@ class Data {
   }
 
   Data(this.velocidadeMax, this.velocidadeAtual);
+
+  String toString() {
+    String resultado = '';
+    if (estaNoLimite() == true) {
+      resultado = 'Verdadeiro';
+    } else {
+      resultado = 'Falso';
+    }
+    return 'Velocidade atual $velocidadeAtual\nVelocidade Maxima que você pode chegar $velocidadeMax\nAtingiu a velocidade Maxima ? $resultado';
+  }
 }
