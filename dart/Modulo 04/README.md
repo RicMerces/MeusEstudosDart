@@ -198,7 +198,13 @@ Aplicando mais validações com metodos get e set
 ```dart
 void set velocidadeAtual(int novaVelocidade){
     bool deltaValido = (_velocidadeAtual - novaVelocidade) <= 5;
-    if(deltaValido){
+    if(deltaValido && novaVelocidade >= 0){
         this._velocidade = novaVelocidade;
     }
 }
+```
+
+### Composição
+Maneira de organizar pastas e classes e como compor o codigo como padrão .
+
+Exemplo é o codigo do Flutter que se baseia em instanciar diversos Objetos que detem propriedades visuais os chamados **Widgets**
