@@ -25,5 +25,5 @@ main() {
 
   print("O valor total da venda é : R\$$venda.valorTotal");
 
-  print("Nome do primeiro produto é: ${venda.itens[0].produto.nome}")
+  print("Nome do primeiro produto é: ${venda.itens[0].produto.nome}");
 }
