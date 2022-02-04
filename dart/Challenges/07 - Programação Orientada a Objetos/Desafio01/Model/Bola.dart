@@ -11,6 +11,4 @@ class Bola {
   String mostrarCor() {
     return 'A COR SELECIONADA = $cor';
   }
-
-  // Bola(this.cor, this.circuferencia, this.material);
 }
