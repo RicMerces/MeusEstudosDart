@@ -23,7 +23,7 @@ class Pessoa {
   }
 
   double crescer() {
-    this.altura += 5;
+    this.altura += 0.05;
     return this.altura;
   }
 }

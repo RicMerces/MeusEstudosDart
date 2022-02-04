@@ -29,9 +29,8 @@ void iniciarPrograma() {
 }
 
 String gerarRetrospecto(int tempo) {
-  int ano = 2022;
   String retro = '';
-  String aux = '';
+  int ano = 2022;
   for (int i = 0; i < tempo; i++) {
     var atual = '';
     if (i == 0) {
@@ -45,12 +44,35 @@ String gerarRetrospecto(int tempo) {
       print(
           "Durante o ano de $ano você ganhou peso ou perdeu se comparado com ${ano - 1} ? ");
       var resp = stdin.readLineSync()!;
-      if (resp.toUpperCase() == 'GANHEI') {
-        print("Quanto você ganhou de peso ?");
-        p.engordar(ganho);
-      } else if (resp.toUpperCase() == 'PERDI') {}
+      validarPeso(resp);
     }
 
+    atual =
+        '${p.nome} está em $ano com ${p.idade} anos, com uma altura de ${p.altura} e peso de ${p.peso}';
+    print(atual + "\n");
+    retro = imprimir(retro, atual);
     ano++;
   }
+  print(retro);
+  return retro;
+}
+
+double validarPeso(String resp) {
+  if (resp.toUpperCase() == 'GANHEI') {
+    print("Quanto você ganhou de peso ?");
+    var ganho = stdin.readLineSync()!;
+    p.engordar(double.parse(ganho));
+  } else if (resp.toUpperCase() == 'PERDI') {
+    print("Quanto você perdeu de peso ?");
+    var perda = stdin.readLineSync()!;
+    p.emagrecer(double.parse(perda));
+  } else {
+    p.peso = p.peso;
+  }
+
+  return p.peso;
+}
+
+String imprimir(String retro, String atual) {
+  return retro = retro + '\n' + atual;
 }
