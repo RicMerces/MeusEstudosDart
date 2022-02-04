@@ -1,0 +1,364 @@
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/1
+ 
+Lista de exercícios – 02
+ 
+
+1. Implemente, em java, um programa que permita a inclusão e listagem de veículos e seus respectivos proprietários. Considere as seguintes características no seu projeto:
+
+Os veículos são caracterizados por placa, ano de fabricação, valor e um proprietário;
+
+Os proprietários possuem as seguintes características: cpf, nome, endereço (CEP, logradouro, número, complemento e bairro) e o telefones. Lembre-se de que uma mesma pessoa pode ser proprietária de diversos veículos
+
+
+
+Atividade NÃO pontuada.
+Implemente no projeto da "Atividade 4 - Introdução à Classes e Objetos" as seguintes alterações:
+1. Os atributos devem ser privados;
+2. Os métodos podem ser públicos ou privados;
+3. A lista de veículos deve ser implementa com ArrayList e seu atributo definido como List.	
+
+
+_________________________________________________________________________________________________
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/2
+
+Lista de exercícios – 01
+
+
+Orientações gerais:
+Atividade em dupla;
+Crie um projeto com o seguinte identificador:
+ 2020-2-atividade6-NomeAluno1-NomeAluno2;
+A correta seleção da visibilidade dos métodos faz parte da avaliação;
+Lembre-se de criar os pacotes necessários;
+Os atributos das classes devem ser privados;
+Entrega deve ser feita pelo GitLab. Será considerada para efeito de cumprimento de prazo de entrega a hora do commit no gitlab. 
+Apenas um dos alunos da dupla deve realizar a entrega, que é a url do projeto no Gitlab;
+O nome do projeto no GitLab deve ser poo-2020-2-atividade6.
+Seu projeto no GitLab deve ser privado e você deve adicionar o professor e o colega de dupla como membros do tipo Maintainer do projeto (usuário do professor no Gitlab antonioclaudioneiva@gmail.com).
+
+
+Implemente, em Java, um programa com as seguintes funcionalidades:
+Inclusão de disciplinas;
+Inclusão de professores;
+Listagem de professores e suas respectivas disciplinas.
+Considere as seguintes características das entidades:
+Os professores possuem dados cadastrais básicos: matrícula, nome, telefone e email. Além disso, é necessário saber as disciplinas que os mesmos lecionam.  
+As disciplinas são caracterizadas por: código, nome e carga horária.
+
+São exemplos de disciplinas:
+Código: BES006 ; Nome: Programação Orientada à Objetos; Carga horária: 60
+Código: BES027; Nome: Banco de Dados II ; Carga horária: 60
+Código: BES017; Nome: Programação WEB ; Carga horária: 90
+Código: BES022 ; Nome: Teste e Qualidade de Software ; Carga horária: 60
+
+São exemplos de professores:
+Matrícula: 1234 ; Nome: Antonio Claudio Neiva ; Telefone: 71998887766
+	Email: antonio.neiva@pro.ucsal.br ; Disciplinas: BES006, BES027, BES022
+Matrícula: 4567; Nome: Mário Jorge ; Telefone: 71776595443
+Email: mario.jorge@pro.ucsal.br ; Disciplinas: BES006, BES017
+
+Atenção:
+Lembre-se de que os dados de exemplo não devem constar da sua aplicação e apenas existem para ilustração. Lembre-se também que os objetos de disciplina devem estar ligados aos objetos de professor (não basta guardar o código da disciplina nas instâncias de professor).
+
+
+_____________________________________________________________________
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/1
+ 
+Lista de exercícios – 03
+ 
+
+1. Implemente, em java, as classes de domínio para resolução do cenário a seguir. Defina nas classes, além dos atributos, os métodos getters e setters, e um construtor parametrizado (parâmetros a sua escolha). Utilize o conceito de HERANÇA na sua resposta.
+
+Cenário:
+
+Uma revenda trabalha com três tipos de veículo: motos, veículos de passeio e veículos de carga.
+
+Todos os veículos possuem placa, ano de fabricação e um valor. 
+
+Sobre as motos é importante saber a categoria (urbana, trilha ou estrada) e a quantidade de cilindradas. 
+
+Sobre os veículos de passeio deve-se manter o registro da quantidade de passageiros máxima e a capacidade do porta-malas (em litros). 
+
+Sobre os veículos de carga é necessário saber a capacidade máxima de carga (em toneladas), quantidade de eixos e a capacidade do tanque de combustível (em litros). 
+
+Sobre os veículos em geral, também é importante saber os seguintes dados do comprador: cpf, nome, endereço (CEP, logradouro, número e bairro) e o telefone. Uma mesma pessoa pode comprar diversos veículos, mas um veículo pode ter apenas um comprador.
+
+
+
+_________________________________________________________________________________________________________________
+
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/2
+ 
+
+Avaliação - Unidade 1 
+
+
+Assuntos abordados:
+Classes
+Atributos de classe e de instância
+Construtores
+Visibilidade de métodos
+Enumeração
+List/ArrayList
+Herança
+
+
+Orientações gerais:
+Atividade em DUPLA;
+Crie um projeto com o seguinte identificador:
+ 2020-2-avaliacao1-NomeAluno1-NomeAluno2
+A correta seleção da visibilidade dos métodos faz parte da avaliação;
+Lembre-se de criar os pacotes necessários;
+Os atributos das classes devem ser privados;
+Entrega deve ser feita pelo GitLab. Será considerada para efeito de cumprimento de prazo a hora do commit no gitlab.
+ Apenas um dos membros da dupla deve realizar a entrega no ClassRoom; 
+O nome do projeto no GitLab deve ser poo-avaliacao1-2020-2.
+Seu projeto no GitLab deve ser privado e você deve adicionar seu colega de dupla e o professor como membros do tipo Maintainer do projeto (usuário do professor no GitLab: antonioclaudioneiva@gmail.com).
+
+Com base no cenário a seguir, faça o que é pedido:
+Crie um programa em Java que implemente uma agenda de compromissos.
+	Sua agenda deve tratar dois tipos de compromisso: presencial e remoto.
+	Todos os compromissos devem ter uma descrição, a data/hora (String para simplificar a implementação), duração (número inteiro), a lista de participantes e o tipo de aviso (ALARME, EMAIL ou MENSAGEM) . Sobre cada participante é preciso saber o nome e o telefone.
+	Os compromissos presenciais devem ter, adicionalmente, o endereço (String). Já os compromissos remotos têm como característica adicional o tipo de aplicativo (uma String para que o usuário possa cadastrar, por exemplo, Google Meet, Zoom, etc) e a URL (também uma String).
+
+[5,0] Defina as classes necessárias ao cadastro dos compromissos, observando:
+Lembre-se de utilizar o conceito de herança na sua solução;
+Todas as classes devem ter construtores parametrizados (todos os atributos), toString e getters/setters para todos os seus atributos;
+Crie uma enumeração para o tipo de aviso;
+
+[5,0] Implemente as funcionalidades:
+Cadastrar compromisso presencial;
+Cadastrar compromisso remoto;
+Listar todos os compromissos (deve listar todos os compromissos presenciais e remotos). 
+
+Obs1: não é necessário implementar um menu. No método main, você deve chamar uma vez o método de cadastro de compromisso presencial, uma vez o método de cadastro de compromisso remoto e uma vez o método de listagem de todos os compromissos.
+
+Obs2: Utilize uma arquitetura em camadas na sua implementação: camadas de apresentação texto (tui), negócio (business) e persistência (persistence). As classes de domínio devem estar no pacote domain
+
+__________________________________________________________
+
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/2
+
+Lista de exercícios – 02
+
+Orientações gerais:
+Atividade em dupla;
+Crie um projeto com o seguinte identificador:
+ 2020-2-atividade8-NomeAluno1-NomeAluno2;
+A correta seleção da visibilidade dos métodos faz parte da avaliação;
+Lembre-se de criar os pacotes necessários;
+Os atributos das classes devem ser privados;
+Entrega deve ser feita pelo GitLab. Será considerada para efeito de cumprimento de prazo de entrega a hora do commit no gitlab. 
+Apenas um dos alunos da dupla deve realizar a entrega, que é a url do projeto no Gitlab;
+O nome do projeto no GitLab deve ser poo-2020-2-atividade8.
+Seu projeto no GitLab deve ser privado e você deve adicionar o professor e o colega de dupla como membros do tipo Maintainer do projeto (usuário do professor no Gitlab antonioclaudioneiva@gmail.com).
+
+
+Atividade:
+Implemente, em java, as classes de domínio para resolução do cenário a seguir. Defina nas classes, além dos atributos, os métodos getters e setters, e um construtor parametrizado (parâmetros a sua escolha). Utilize o conceito de HERANÇA na sua resposta.
+
+Cenário:
+Uma clínica deseja armazenar dados sobre seus funcionários (administradores, médicos, enfermeiros, recepcionistas, etc). Para tanto, foram identificadas seguintes características:
+Funcionários:
+Matrícula;
+Nome;
+Ano de admissão;
+Salário.
+Médicos:
+Matrícula;
+Nome;
+Ano de admissão;
+Salário;
+Número de inscrição no CRM;
+Nomes das especialidades.
+Enfermeiras:
+Matrícula;
+Nome;
+Ano de admissão;
+Salário;
+Número de inscrição no COREN;
+Tipo de atuação (ASSISTÊNCIA, ADMINISTRAÇÃO);
+Carga horária.
+
+
+_________________________________________________
+
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/2
+
+Lista de exercícios – 03
+
+Assuntos abordados:
+Herança
+Classes / métodos abstratos
+Interface
+Coleções
+Exception
+Ordenação
+
+Com base no cenário a seguir, faça o que é pedido:
+	Imobiliária deseja informatizar o cadastro dos seus imóveis. 
+	Os imóveis são caracterizados por: código (número inteiro), endereço (texto), bairro (texto) e valor (número fracionário). A imobiliária trabalha com apenas dois tipos de imóvel: apartamentos e casas. 
+	Sobre os apartamentos é necessário saber também a área de fração ideal (número fracionário) e a área privativa (número fracionário), e sobre as casas a área de terreno (número fracionário) e a área construída (número fracionário);
+	É importante observar que o valor do imóvel deve ser sempre maior que zero.
+
+Crie uma exceção para tratar o caso de fornecimento de valor do imóvel menor ou igual a zero no cadastro de imóveis. A correta seleção da superclasse desta exceção (Exception, RuntimeException e Error) faz parte da avaliação. Fica como sugestão para o nome da exceção: ValorImovelInvalidoException.
+
+Defina uma hierarquia e crie as classes necessárias ao cadastro de imóveis, observando as seguintes recomendações:
+Lembre-se de que apenas apartamentos e casas podem ser cadastrados, ou seja, não deve ser possível instanciar um imóvel que não seja de um desses tipos;
+As classes devem ter construtores parametrizados com todos os seus atributos para facilitar a instanciação das mesmas;
+As classes devem ter métodos getters e setters para viabilizar alteração em seus atributos;
+As classes devem ter implementação do método toString para facilitar a listagem de dados;
+O(s) método(s) que definir(em) o atributo valor do imóvel deve fazer o adequado tratamento de que o valor do imóvel deve ser maior que zero, utilizando adequadamente a exceção ValorImovelInvalidoException;
+Tanto casas quanto apartamentos devem ter um método para cálculo do valor do imposto, com as seguintes características:
+Apartamentos: 100 * área privativa + 30 * área de fração ideal;
+Casas: 120 * área construída + 15 * área de terreno;
+
+Crie uma classe Imobiliária:
+Atributo estático: uma lista para todos os imóveis, tanto casas quanto apartamentos. A lista deve ser instanciada na declaração do atributo;
+Métodos estáticos:
+cadastrarCasa: este método deve receber os atributos necessários à instanciação de um objeto da classe Casa e adicioná-lo à lista de imóveis. Lembre-se de realizar o tratamento de exceção;
+listarImoveisPorCodigo: este método deve listar os imóveis por ordem crescente de código. Esta deve ser a ordenação padrão para imóveis (a implementação do critério de ordenação deve ser feita na classe de imóvel). Sua listagem deve conter: código, endereço e bairro;
+listarImoveisPorBairroValor: este método deve listar os imóveis, por ordem crescente de Bairro e por ordem crescente de valor dentro de cada Bairro. Sua listagem deve conter: código, endereço e valor do imposto;
+listarBairros: este método deve listar os bairros onde existem imóveis cadastrados. Não devem ser exibidos nomes de bairro repetidos;
+
+________________________________________________________________
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/2
+
+Lista de exercícios – 04
+
+Orientações gerais:
+Atividade em TRIO;
+Crie um projeto com o seguinte identificador:
+ 2020-2-atividade10-NomeAluno1-NomeAluno2-NomeAluno3;
+A correta seleção da visibilidade dos métodos faz parte da avaliação;
+Lembre-se de criar os pacotes necessários;
+Os atributos das classes devem ser privados;
+Entrega deve ser feita pelo GitLab. Será considerada para efeito de cumprimento de prazo de entrega a hora do commit no gitlab. 
+Apenas um dos alunos do trio deve realizar a entrega no ClassRoom, que é a URL do projeto no Gitlab. Inclua o nome dos membros do trio como comentário no ClassRoom;
+O nome do projeto no GitLab deve ser poo-2020-2-atividade10.
+Seu projeto no GitLab deve ser privado e você deve adicionar o professor e os colegas do trio como membros do tipo Maintainer do projeto (usuário do professor no Gitlab antonioclaudioneiva@gmail.com).
+
+
+Atividade:
+Com base no cenário a seguir, faça o que é pedido:
+	Imobiliária deseja informatizar o cadastro dos seus imóveis. 
+	Os imóveis são caracterizados por: código (número inteiro), endereço (texto), bairro (texto) e valor do imóvel (número fracionário). A imobiliária trabalha com apenas dois tipos de imóvel: apartamentos e casas. 
+	Sobre os apartamentos é necessário saber também a área de fração ideal (número fracionário) e a área privativa (número fracionário), e sobre as casas a área de terreno (número fracionário) e a área construída (número fracionário);
+[50%] Defina uma hierarquia e crie as classes necessárias ao cadastro de imóveis, observando as seguintes recomendações:
+Lembre-se de que apenas apartamentos e casas podem ser cadastrados, ou seja, não deve ser possível instanciar um imóvel que não seja de um desses tipos;
+As classes devem ter construtores parametrizados com todos os seus atributos para facilitar a instanciação das mesmas:
+As classes devem ter métodos getters e setters para viabilizar alteração em seus atributos;
+As classes devem ter implementação do método toString para facilitar a listagem de dados;
+Tanto casas quanto apartamentos devem ter um método para cálculo do valor do imposto, com as seguintes características:
+Apartamentos: 100 * área privativa + 30 * área de fração ideal;
+Casas: 120 * área construída + 15 * área de terreno;
+Crie uma classe Imobiliaria:
+[5%] Atributo estático: uma lista para todos os imóveis, tanto casas quanto apartamentos. A lista deve ser instanciada na declaração do atributo;
+Métodos estáticos:
+[10%] cadastrarCasa: este método deve receber os atributos necessários à instanciação de um objeto da classe Casa e adicioná-lo à lista de imóveis;
+[35%] listarImoveisPorCodigo: este método deve listar os imóveis por ordem crescente de código. Sua listagem deve conter: código, endereço, bairro, valor do imóvel e valor do imposto;
+OBSERVAÇÕES: 
+Não é necessário criar a interface de entrada de dados, ou seja, não é necessário utilizar o Scanner;
+Para simplificar a implementação, não é necessário criar BO e DAO;
+Não é necessário criar o método main.
+
+
+________________________________________________________
+
+ Atividade PONTUADA;
+. Não é necessário entregar o projeto;
+. A avaliação será feita durante a apresentação;
+. NÃO é necessário que todos os membros da equipe apresentem;
+. O tempo máximo por equipe de 15 minutos;
+. Serão itens pontuados:
+- Presença durante a apresentação das equipes;
+- Atributos privados;
+- Construtores parametrizados;
+- Método de instância;
+- Método de classe (static);
+- Atributo de instância;
+- Atributo de classe (static);
+- HERANÇA;
+- Polimorfismo;
+- Coleção (listas ou conjuntos). NÃO é necessário utilizar mapas;
+- Interface (do Java, como a List, ou uma implementada no projeto);
+- Ordenação;
+- Exceção.
+
+
+
+
+_____________________________________________
+
+
+
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/2
+ 
+Avaliação 2ª unidade
+ 
+Assuntos abordados: 
+Herança;
+Interface; 
+Exceções;
+Ordenação.
+Orientações gerais:
+Atividade em TRIO;
+Crie um projeto com o seguinte identificador:
+ 2020-2-avaliacao2-NomeAluno1-NomeAluno2-NomeAluno3;
+A correta seleção da visibilidade dos métodos faz parte da avaliação;
+Lembre-se de criar os pacotes necessários;
+Os atributos das classes devem ser privados;
+Entrega deve ser feita pelo GitLab. Será considerada para efeito de cumprimento de prazo de entrega a hora do commit no gitlab. 
+Apenas UM dos alunos do trio deve realizar a entrega no ClassRoom, que é a URL do projeto no Gitlab. Inclua o nome dos membros do trio como comentário no ClassRoom;
+O nome do projeto no GitLab deve ser poo-2020-2-avaliacao2.
+Seu projeto no GitLab deve ser privado e você deve adicionar o professor e os colegas do trio como membros do tipo Maintainer do projeto (usuário do professor no Gitlab antonioclaudioneiva@gmail.com).
+Com base no cenário a seguir, faça o que é pedido:
+Uma escola precisa cadastrar seus professores e alunos.
+Sobre os professores é preciso saber nome, nacionalidade, telefone e titulação (ESPECIALISTA, MESTRE OU DOUTOR).
+Sobre os alunos: nacionalidade, nome, telefone, ano de nascimento e nome da escola de origem.
+O atributo telefone é obrigatório apenas para alunos, sendo opcional para professores.
+O tratamento para atributos obrigatórios e validação de atributos deve utilizar exceptions.
+
+[0,5] Crie uma exceção para tratar informações obrigatórias não informadas (ValorNaoInformadoException, filha de Exception), para o caso do telefone de alunos.
+[4,5] Defina uma hierarquia e crie as classes necessárias ao cadastro de professores e alunos, lembrando de estabelecer uma superclasse para acomodar os atributos e comportamentos em comum, observando as seguintes recomendações:
+Lembre-se de que apenas alunos e professores podem ser instanciados;
+As classes devem ter construtores parametrizados com todos os seus atributos para facilitar a instanciação das mesmas;
+As classes devem ter métodos getters e setters para todos os atributos;
+As classes devem ter implementação do método toString;
+A validação de atributo obrigatório (telefone de alunos) deve ser feita na classe de domínio e não na classe de negócio. Ou seja, deve ser feita nas classes aqui descritas e não na classe PessoaBO. NÃO devem ser feitas outras validações sobres os atributos.
+Crie uma classe PessoaBO, com os seguintes métodos estáticos:
+[1,0] cadastrarAluno: este método deve receber os atributos necessários à instanciação de um objeto da classe Aluno e utilizar o método adequado do PessoaDAO para persistir esta instância. Caso ocorra uma exceção, a mesma deve ser repassada para a cada de apresentação;
+[1,5] obterPessoasOrdemNome: este método deverá retornar uma lista de pessoas por ordem crescente de nome (o método não deve imprimir os dados, deve apenas retorná-los);
+[1,0] Crie uma classe PessoaDAO, com os métodos e atributo estático necessários ao atendimento das demandas da camada de negócio.
+Crie uma classe PessoaTUI:
+[1,5] Um método para cadastrar aluno, neste método você de utilizar os comandos de interface em linha de comando para solicitar os dados necessários ao cadastro de um aluno, fazer a adequada chamada ao método de negócio e tratar adequadamente as exceções que podem vir a ocorrer.
