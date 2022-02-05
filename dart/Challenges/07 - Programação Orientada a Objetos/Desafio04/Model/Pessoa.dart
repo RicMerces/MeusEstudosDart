@@ -12,6 +12,11 @@ class Pessoa {
     return this.idade;
   }
 
+  String mudarNome(novoNome) {
+    this.nome = novoNome;
+    return nome;
+  }
+
   double engordar(double ganho) {
     this.peso += ganho;
     return this.peso;

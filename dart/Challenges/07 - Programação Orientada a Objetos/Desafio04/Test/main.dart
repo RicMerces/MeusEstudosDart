@@ -46,6 +46,7 @@ String gerarRetrospecto(int tempo) {
       var resp = stdin.readLineSync()!;
       validarPeso(resp);
     }
+    mudarDeNome();
 
     atual =
         '${p.nome} está em $ano com ${p.idade} anos, com uma altura de ${p.altura} e peso de ${p.peso}';
@@ -75,4 +76,17 @@ double validarPeso(String resp) {
 
 String imprimir(String retro, String atual) {
   return retro = retro + '\n' + atual;
+}
+
+String mudarDeNome() {
+  print("Deseja mudar de nome ? ");
+  var i = stdin.readLineSync()!;
+  String novoNome = '';
+  if (i.toLowerCase() == 'sim') {
+    print("Informe seu novo nome");
+    novoNome = stdin.readLineSync()!;
+    p.mudarNome(novoNome);
+  }
+
+  return p.nome;
 }
