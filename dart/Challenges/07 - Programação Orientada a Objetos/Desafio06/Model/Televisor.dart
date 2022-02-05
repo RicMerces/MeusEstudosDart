@@ -1,6 +1,8 @@
 class Televisor {
   int canal = 0;
-  int volume = 0;
+  int volume;
+  // List<NomeCanal> listaDeCanais;
+  Televisor(this.canal, {this.volume = 50});
 
   int informarCanal(numeroDoCanal) {
     this.canal = numeroDoCanal;

@@ -28,6 +28,8 @@ informeCanal() {
       bool x = int.parse(acoes) is int;
       if (x == true) {
         t.informarCanal(int.parse(acoes));
+      } else {
+        print("Esse valor é invalido");
       }
     }
   }
