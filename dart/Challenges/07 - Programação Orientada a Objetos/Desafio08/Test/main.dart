@@ -29,6 +29,8 @@ String acoes(nome, i) {
         "Informe a ação que você deseja realizar com o macaco chamado de $nome");
     print(
         "---------------------------------\n1- Comer\n2- Ver Bucho\n0- Finalizar ações com o $nome");
+    var ij = stdin.readLineSync()!;
+    j = int.parse(ij);
     if (i == 0) {
       if (j == 1) {
         m1.comer(alimentar(nome));
@@ -58,6 +60,8 @@ String alimentar(nome) {
   } else if (alimento == m1.nome) {
     print("${m2.nome} vai se alimentar do Macaco ${m1.nome}");
     alimento = '${m1.bucho}';
+  } else {
+    print("$alimento adicionado ao bucho");
   }
   return alimento;
 }
