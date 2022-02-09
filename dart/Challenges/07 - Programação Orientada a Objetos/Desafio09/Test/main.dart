@@ -1,10 +1,14 @@
 import 'dart:io';
-import '../Model/Retangulo.dart';
 
-main() {
-  print("Informe os lados do retangulo");
-  var h = stdin.readLineSync()!;
-  var w = stdin.readLineSync()!;
+import '../model/Retangulo.dart';
 
-  Retangulo r = Retangulo(double.parse(h), double.parse(w));
+void main() {
+  print("Informe os lados do rentangulo");
+  var altura = stdin.readLineSync()!;
+  var largura = stdin.readLineSync()!;
+
+  double h = double.parse(altura);
+  double w = double.parse(largura);
+  Retangulo r = new Retangulo(w, h);
+  print('${r.altura}' + ' ${r.largura}');
 }

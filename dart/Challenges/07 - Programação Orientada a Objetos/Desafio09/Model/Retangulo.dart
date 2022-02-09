@@ -1,34 +1,31 @@
 import 'Ponto.dart';
 
 class Retangulo {
-  Retangulo([this.altura, this.largura]);
+  Ponto ponto = new Ponto({_altura = 0, largura = 0});
 
   double _altura;
   double _largura;
 
-  Ponto p = new Ponto(altura, largura);
+  var verticeSuperiorFinal = new Ponto(_largura, _altura);
+  var verticeInferiorFinal = new Ponto(_largura, 0);
+  var verticeSuperiorInicial = new Ponto(0, _altura);
+  var verticeInferiorInicial = new Ponto(0, 0);
 
-  String centroRetangulo() {
-    String centro = '';
-    double alturaCentral = (altura / 2);
-    double larguraCentral = (largura / 2);
-
-    Ponto pCentro = new Ponto(alturaCentral, larguraCentral);
-  }
+  // encontrarCentro() {}
 
   double get altura {
-    return _altura;
+    return this._altura;
   }
 
   double get largura {
-    return _largura;
+    return this._largura;
   }
 
-  void set altura(double altura) {
-    this._altura = altura;
+  void set altura(double h) {
+    this._altura = h;
   }
 
-  void set largura(double largura) {
-    this._largura = largura;
+  void set largura(double w) {
+    this._largura = w;
   }
 }

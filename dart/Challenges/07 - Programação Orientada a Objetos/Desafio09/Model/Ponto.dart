@@ -1,10 +1,22 @@
 class Ponto {
-  Ponto({this.x, this.y});
+  Ponto(this.x = 0, this.y = 0);
 
-  double x;
-  double y;
+  double _x;
+  double _y;
 
-  String toString() {
-    return "Valor X = $x\nValor Y = $y";
+  double get x {
+    return _x;
+  }
+
+  double get y {
+    return _y;
+  }
+
+  void set x(double x) {
+    this.x = y;
+  }
+
+  void set y(double y) {
+    this.y = y;
   }
 }
