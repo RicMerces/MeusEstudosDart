@@ -1,6 +1,6 @@
-class Cliente {
-  String nome;
-  String cpf;
+// class Cliente {
+//   String nome;
+//   String cpf;
 
-  Cliente({this.nome, this.cpf});
-}
+//   Cliente({this.nome, this.cpf});
+// }
