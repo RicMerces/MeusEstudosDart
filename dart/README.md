@@ -8,9 +8,9 @@
 - Estrutura de Repetição ✔️
 - Listas ✔️
 - Funções ✔️
-- MAP & Reduce 🏇
-- Filter 🚩
-- Programação Orientada a Objetos 🚩
+- MAP & Reduce ✔️
+- Filter ✔️
+- Programação Orientada a Objetos 🏇
 
 
 
