@@ -28,22 +28,24 @@ class Pessoa {
   //   this.idade = idade;
   // }
 
-  Pessoa({required this.nome, required this.idade}) {
+  Pessoa({required this.nome, required this.idade, this.casado = false}) {
     print("Criando $nome com idade $idade");
   }
 
   //Ações dentro do construtor
-  Pessoa.casada({required this.nome, required this.idade}) {
+  Pessoa.casada(
+      {required this.nome, required this.idade, this.casado = false}) {
     casado = true;
   }
 
-  Pessoa.solteira({required this.nome, required this.idade}) {
+  Pessoa.solteira(
+      {required this.nome, required this.idade, this.casado = false}) {
     casado = false;
   }
 
   String nome;
   int idade;
-  bool casado = false;
+  bool casado;
 
   bool casar() {
     this.casado = true;
