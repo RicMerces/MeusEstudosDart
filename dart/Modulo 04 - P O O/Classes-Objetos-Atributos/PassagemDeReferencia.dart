@@ -8,6 +8,7 @@ void main() {
   print(pessoa2.nome);
   print(pessoa2.idade);
 
+//Nesse caso n houve passagem de referencia
   int numero = 10;
   funcao(numero);
   print(numero);
