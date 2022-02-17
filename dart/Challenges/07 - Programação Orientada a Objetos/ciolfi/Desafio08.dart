@@ -15,7 +15,7 @@ class Macaco {
   }
 
   String verBucho() {
-    return 'O Bucho de $nome : \n$bucho';
+    return '$bucho';
   }
 }
 
@@ -30,4 +30,13 @@ void main() {
   print(m1.verBucho());
 
   Macaco m2 = new Macaco(nome: 'Arnold');
+  m2.comer('Uva');
+  m2.comer('Beterraba');
+  m2.comer('Formiga');
+  m2.comer('Pamonha');
+
+  print(m2.verBucho());
+
+  m1.comer(m2.verBucho());
+  print(m1.verBucho());
 }
