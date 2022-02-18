@@ -1,5 +1,8 @@
 class Retangulo {}
 
-class Ponto {}
+class Ponto {
+  double x;
+  double y;
+}
 
 void main() {}
