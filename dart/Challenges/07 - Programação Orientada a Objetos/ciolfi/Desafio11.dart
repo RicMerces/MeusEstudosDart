@@ -7,7 +7,7 @@ class Carro {
 
   double andar(double d) {
     distancia = d;
-    litro -= distancia / qtdCombustivel;
+    litro -= (distancia / qtdCombustivel);
     return litro;
   }
 
@@ -25,7 +25,7 @@ class Carro {
 void main() {
   Carro c = new Carro(qtdCombustivel: 15);
 
-  print(c.adicionarGasolina(100));
-  c.andar(1000);
+  print(c.adicionarGasolina(20));
+  c.andar(100);
   print(c.obteGasolina());
 }
