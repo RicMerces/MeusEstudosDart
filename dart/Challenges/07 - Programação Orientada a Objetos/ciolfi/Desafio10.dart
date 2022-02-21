@@ -2,13 +2,17 @@ void main() {
   bombaDeCombustivel b =
       new bombaDeCombustivel(tipoCombustivel: 'GASOLINA', qtdLitro: 20);
   b.alterarCombustivel('GASOLINA');
-  print(b.abastecerPorLitro(40));
-  print(b.abastecerPorLitro(10));
+  b.alterarQtdCombustivel(40);
+  print(b.abastecerPorLitro());
+  b.alterarQtdCombustivel(10);
+  print(b.abastecerPorLitro());
 
   print(b.abastecerPorValor(72.1));
   b.alterarCombustivel('ALCOOL');
-  print(b.abastecerPorLitro(40));
-  print(b.abastecerPorLitro(10));
+  b.alterarQtdCombustivel(40);
+  print(b.abastecerPorLitro());
+  b.alterarQtdCombustivel(10);
+  print(b.abastecerPorLitro());
 }
 
 class bombaDeCombustivel {
@@ -23,8 +27,7 @@ class bombaDeCombustivel {
     return qtdLitro;
   }
 
-  double abastecerPorLitro(double litro) {
-    qtdLitro = litro;
+  double abastecerPorLitro() {
     double valorFinal = valorLitro * qtdLitro;
     return valorFinal;
   }
@@ -47,7 +50,7 @@ class bombaDeCombustivel {
   }
 
   double alterarQtdCombustivel(double qtd) {
-    qtd = qtdLitro;
+    qtdLitro = qtd;
     return qtd;
   }
 }
