@@ -1,8 +1,12 @@
 void main() {
-  contaInvestimento c1 = contaInvestimento(nome: 'Ricardo', numeroDaConta: 59881931);
+  contaInvestimento c1 =
+      contaInvestimento(nome: 'Ricardo', numeroDaConta: 59881931);
 
-  c1.
-
+  c1.adicionarJuros();
+  print(c1.saldoAtual);
+  c1.alterarValorJuros(0.40);
+  c1.adicionarJuros();
+  print(c1.saldoAtual);
 }
 
 class contaInvestimento {
@@ -33,15 +37,14 @@ class contaInvestimento {
     return saldoAtual;
   }
 
-  double alterarValorJuros(double juros){
+  double alterarValorJuros(double juros) {
     this.juros = juros;
     return this.juros;
   }
 
-
   double adicionarJuros() {
     print("Juros adicionados !");
-    saldoAtual -= saldoAtual * juros;
-    return saldoAtual;
+    this.saldoAtual -= saldoAtual * juros;
+    return this.saldoAtual;
   }
 }
