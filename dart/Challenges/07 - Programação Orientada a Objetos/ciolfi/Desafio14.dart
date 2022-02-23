@@ -21,7 +21,7 @@ class Funcionario {
   double salario;
 
   adicionarSalario(double adicionar) {
-    salario += adicionar;
+    salario += salario * (adicionar * 0.01);
     return salario;
   }
 
