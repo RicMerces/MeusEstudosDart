@@ -9,8 +9,13 @@ void main() {
   g.comer();
 
   Animal animal1 = funcao();
+  if (animal1 is Gato) {
+    animal1.miar();
+  }
 
   Gato g2 = funcao() as Gato;
+
+  g2.miar();
 
   print(animal1);
   print(g2);
