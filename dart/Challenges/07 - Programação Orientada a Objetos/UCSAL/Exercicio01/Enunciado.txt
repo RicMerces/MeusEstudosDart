@@ -1,0 +1,13 @@
+1. Implemente, em java, um programa que permita a inclusão e listagem de veículos e seus respectivos proprietários. Considere as seguintes características no seu projeto:
+
+Os veículos são caracterizados por placa, ano de fabricação, valor e um proprietário;
+
+Os proprietários possuem as seguintes características: cpf, nome, endereço (CEP, logradouro, número, complemento e bairro) e o telefones. Lembre-se de que uma mesma pessoa pode ser proprietária de diversos veículos
+
+
+
+Atividade NÃO pontuada.
+Implemente no projeto da "Atividade 4 - Introdução à Classes e Objetos" as seguintes alterações:
+1. Os atributos devem ser privados;
+2. Os métodos podem ser públicos ou privados;
+3. A lista de veículos deve ser implementa com ArrayList e seu atributo definido como List.
