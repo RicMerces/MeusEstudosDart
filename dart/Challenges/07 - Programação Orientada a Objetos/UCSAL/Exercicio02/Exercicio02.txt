@@ -1,0 +1,20 @@
+
+Implemente, em Java, um programa com as seguintes funcionalidades:
+Inclusão de disciplinas;
+Inclusão de professores;
+Listagem de professores e suas respectivas disciplinas.
+Considere as seguintes características das entidades:
+Os professores possuem dados cadastrais básicos: matrícula, nome, telefone e email. Além disso, é necessário saber as disciplinas que os mesmos lecionam.  
+As disciplinas são caracterizadas por: código, nome e carga horária.
+
+São exemplos de disciplinas:
+Código: BES006 ; Nome: Programação Orientada à Objetos; Carga horária: 60
+Código: BES027; Nome: Banco de Dados II ; Carga horária: 60
+Código: BES017; Nome: Programação WEB ; Carga horária: 90
+Código: BES022 ; Nome: Teste e Qualidade de Software ; Carga horária: 60
+
+São exemplos de professores:
+Matrícula: 1234 ; Nome: Antonio Claudio Neiva ; Telefone: 71998887766
+	Email: antonio.neiva@pro.ucsal.br ; Disciplinas: BES006, BES027, BES022
+Matrícula: 4567; Nome: Mário Jorge ; Telefone: 71776595443
+Email: mario.jorge@pro.ucsal.br ; Disciplinas: BES006, BES017
