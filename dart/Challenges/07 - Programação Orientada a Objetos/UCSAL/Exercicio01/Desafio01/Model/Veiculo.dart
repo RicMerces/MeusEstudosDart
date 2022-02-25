@@ -12,6 +12,6 @@ class Veiculo {
 
   @override
   String toString() {
-    return '- Modelo : $modelo\n- Placa : $placa\n- Ano : $placa\n- Valor : R\$ $valor';
+    return '- Modelo : $modelo\n- Placa : $placa\n- Ano : $ano\n- Valor : R\$ $valor';
   }
 }
