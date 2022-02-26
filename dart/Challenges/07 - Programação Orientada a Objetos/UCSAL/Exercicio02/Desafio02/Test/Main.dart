@@ -10,4 +10,6 @@ void main() {
         Materias(codigo: '12312', nome: 'Fisica', carga: 40),
         Materias(codigo: '3213', nome: 'Matematica', carga: 20)
       ]);
+
+  print(p);
 }

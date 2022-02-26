@@ -11,4 +11,8 @@ class Professor {
   int? telefone;
   String? nome;
   List<Materias> materias;
+
+  String toString() {
+    return '| Nome do Professor : $nome |\n| Telefone : $telefone |\n| Matricula : $matricula |\n| Materias : $materias';
+  }
 }
