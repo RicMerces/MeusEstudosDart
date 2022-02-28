@@ -1,0 +1,25 @@
+UNIVERSIDADE CATÓLICA DO SALVADOR
+DISCIPLINA – PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR – ANTONIO CLAUDIO P. NEIVA
+ANO/SEMESTRE – 2020/1
+ 
+Lista de exercícios – 03
+ 
+
+1. Implemente, em java, as classes de domínio para resolução do cenário a seguir. Defina nas classes, além dos atributos, os métodos getters e setters, e um construtor parametrizado (parâmetros a sua escolha). Utilize o conceito de HERANÇA na sua resposta.
+
+Cenário:
+
+Uma revenda trabalha com três tipos de veículo: motos, veículos de passeio e veículos de carga.
+
+Todos os veículos possuem placa, ano de fabricação e um valor. 
+
+Sobre as motos é importante saber a categoria (urbana, trilha ou estrada) e a quantidade de cilindradas. 
+
+Sobre os veículos de passeio deve-se manter o registro da quantidade de passageiros máxima e a capacidade do porta-malas (em litros). 
+
+Sobre os veículos de carga é necessário saber a capacidade máxima de carga (em toneladas), quantidade de eixos e a capacidade do tanque de combustível (em litros). 
+
+Sobre os veículos em geral, também é importante saber os seguintes dados do comprador: cpf, nome, endereço (CEP, logradouro, número e bairro) e o telefone. Uma mesma pessoa pode comprar diversos veículos, mas um veículo pode ter apenas um comprador.
+
+
