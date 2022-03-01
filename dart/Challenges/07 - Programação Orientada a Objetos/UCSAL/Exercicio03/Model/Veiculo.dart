@@ -1,14 +1,8 @@
-import 'Comprador.dart';
-
 class Veiculo {
-  Veiculo(
-      {required this.ano,
-      required this.placa,
-      required this.valor,
-      required this.comprador});
+  Veiculo({required ano, required modelo, required placa, required valor});
 
-  String? placa;
+  String? modelo;
   int? ano;
+  String? placa;
   double? valor;
-  Comprador comprador;
 }

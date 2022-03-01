@@ -1,7 +1,12 @@
-class Comprador {
-  Comprador({required this.nome, required this.cpf, required this.cep});
+import '../Model/Veiculo.dart';
 
-  String nome;
-  int cpf;
-  int cep;
+class Comprador {
+  String? nome;
+  int? cpf;
+  List<Veiculo> veiculos = [];
+
+  List adicionarVeiculo() {
+    veiculos.add();
+    return veiculos;
+  }
 }
