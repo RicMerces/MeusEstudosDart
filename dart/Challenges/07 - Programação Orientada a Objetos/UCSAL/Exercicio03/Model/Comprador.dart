@@ -6,7 +6,7 @@ class Comprador {
   List<Veiculo> veiculos = [];
 
   List adicionarVeiculo() {
-    veiculos.add();
+    // veiculos.add();
     return veiculos;
   }
 }

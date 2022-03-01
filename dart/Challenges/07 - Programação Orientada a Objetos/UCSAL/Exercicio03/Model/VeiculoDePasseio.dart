@@ -1,3 +1,3 @@
-import '../../Exercicio01/Desafio01/Model/Veiculo.dart';
+// import '../../Exercicio01/Desafio01/Model/Veiculo.dart';
 
-class VeiculoDePasseio extends Veiculo {}
+// class VeiculoDePasseio extends Veiculo {}
