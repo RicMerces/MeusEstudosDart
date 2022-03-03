@@ -6,4 +6,20 @@ class VeiculoDePasseio extends Veiculo {
 
   int? _qtdPassageiros;
   double? _capacidadeP;
+
+  int? get qtdPassageiros {
+    return this._qtdPassageiros;
+  }
+
+  double? get capacidadeP {
+    return this._capacidadeP;
+  }
+
+  void set qtdPassageiros(int? p) {
+    this._qtdPassageiros = p;
+  }
+
+  void set capacidadeP(double? c) {
+    this._capacidadeP = c;
+  }
 }
