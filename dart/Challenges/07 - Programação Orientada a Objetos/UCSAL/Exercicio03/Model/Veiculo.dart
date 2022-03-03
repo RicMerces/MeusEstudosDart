@@ -7,4 +7,8 @@ class Veiculo {
   String? placa;
   int? anoDeFabricacao;
   double? valor;
+
+  String toString() {
+    return 'Placa do Veiculo = $placa\nAno de Fabricação = $anoDeFabricacao\nValor = R\$ $valor';
+  }
 }

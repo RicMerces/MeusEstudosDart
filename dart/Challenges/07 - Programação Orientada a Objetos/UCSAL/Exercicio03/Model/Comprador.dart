@@ -1,4 +1,4 @@
-import '../../Exercicio01/Desafio01/Model/Veiculo.dart';
+// import './Veiculo.dart';
 
 class Comprador {
   int? _cpf;
@@ -6,7 +6,7 @@ class Comprador {
   int? _cep;
   int? _telefone;
 
-  List<Veiculo> veiculos = [];
+  List automoveis = [];
 
   String? get nome {
     return this._nome;
@@ -40,8 +40,8 @@ class Comprador {
     this._telefone = telefone;
   }
 
-  List adicionarVeiculo(Veiculo v) {
-    veiculos.add(v);
-    return veiculos;
+  @override
+  String toString() {
+    return '-------------\nNome: $nome\nTelefone: $telefone\nVeiculos: $automoveis';
   }
 }
