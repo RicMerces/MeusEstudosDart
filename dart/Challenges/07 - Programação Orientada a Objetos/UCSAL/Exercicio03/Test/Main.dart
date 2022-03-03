@@ -1,4 +1,4 @@
-import '../model/Comprador.dart';
+import '../Model/Comprador.dart';
 import '../Model/Veiculo.dart';
 
 void main() {
@@ -12,6 +12,6 @@ void main() {
   c.cpf = 1213123123;
   c.cep = 3123121231;
   c.telefone = 123123132;
-
+  c.adicionarAutomovel(v);
   print(c);
 }
