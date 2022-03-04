@@ -1,12 +1,14 @@
 // import './Veiculo.dart';
 
+import 'Veiculo.dart';
+
 class Comprador {
   int? _cpf;
   String? _nome;
   int? _cep;
   int? _telefone;
 
-  List automoveis = [];
+  List<Veiculo> automoveis = [];
 
   String? get nome {
     return this._nome;
@@ -37,7 +39,12 @@ class Comprador {
   }
 
   void set telefone(int? n) {
-    this._telefone = telefone;
+    this._telefone = n;
+  }
+
+  List adicionarAutomovel(Veiculo v) {
+    automoveis.add(v);
+    return automoveis;
   }
 
   @override
