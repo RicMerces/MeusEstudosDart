@@ -1,4 +1,4 @@
-class Funcionario {
+abstract class Funcionario {
   Funcionario(
       {required this.nome, required this.idade, required this.matricula});
 
