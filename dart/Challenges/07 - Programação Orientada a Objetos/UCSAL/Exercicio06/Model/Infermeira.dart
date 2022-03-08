@@ -5,4 +5,10 @@ class Infermeira extends Funcionario {
       : super(nome: nome, idade: idade, matricula: matricula);
 
   String? cre;
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return '----------Infermeira----------\n${super.toString()}\nCRE : $cre';
+  }
 }

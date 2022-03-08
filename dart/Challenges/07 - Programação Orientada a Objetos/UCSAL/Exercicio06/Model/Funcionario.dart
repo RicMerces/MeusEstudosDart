@@ -5,4 +5,8 @@ class Funcionario {
   String? nome;
   int? idade;
   int? matricula;
+
+  String toString() {
+    return 'Nome : $nome\nIdade : $idade\nMatricula : $matricula';
+  }
 }

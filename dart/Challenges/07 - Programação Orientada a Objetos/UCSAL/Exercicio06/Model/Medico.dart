@@ -5,4 +5,9 @@ class Medico extends Funcionario {
       : super(nome: nome, idade: idade, matricula: matricula);
 
   String? crm;
+
+  @override
+  String toString() {
+    return '----------Medico----------\n${super.toString()}\nCRE : $crm';
+  }
 }
