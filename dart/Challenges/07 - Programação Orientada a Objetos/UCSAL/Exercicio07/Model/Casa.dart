@@ -5,4 +5,11 @@ class Casa extends Imovel {
       : super(bairro: bairro, endereco: endereco, valor: valor, codigo: codigo);
 
   double? area;
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return '\n-------------CASA-----------------\nArea : $area' +
+        super.toString();
+  }
 }

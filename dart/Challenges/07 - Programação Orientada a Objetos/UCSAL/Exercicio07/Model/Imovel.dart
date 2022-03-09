@@ -16,4 +16,8 @@ class Imovel {
     }
     return this.valor;
   }
+
+  String toString() {
+    return 'codigo : $codigo\nCEP : $bairro, $endereco\n Valor = R\$ $valor';
+  }
 }

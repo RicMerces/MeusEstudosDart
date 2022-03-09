@@ -7,4 +7,11 @@ class Apartamento extends Imovel {
 
   double? fracaoIdeal;
   double? areaPrivada;
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return '\n-----------APARTAMENTO-----------\nArea Privada : $areaPrivada\nFração Ideal : $fracaoIdeal' +
+        super.toString();
+  }
 }
