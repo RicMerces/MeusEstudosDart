@@ -9,4 +9,11 @@ class Imovel {
   String? endereco;
   String? bairro;
   double? valor;
+
+  double? verificarImovel() {
+    if (this.valor! < 0) {
+      this.valor = 0;
+    }
+    return this.valor;
+  }
 }
