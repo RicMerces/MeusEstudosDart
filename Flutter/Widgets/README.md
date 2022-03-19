@@ -88,4 +88,24 @@ class MyApp extends StatelessWidget {
 }
 ```
 
+### Tipos de Widgets
 
+#### Entrada e saida (Visíveis) {
+    RaisedButton()
+    Text(),
+    Card(),
+    ...
+**}**
+
+#### Layout e Controle (Invisíveis) {
+    Column(),
+    Row(),
+    ListView(),
+    ...
+**}**
+
+
+**Container()**
+
+- Desenha a tela o que o usuario ver
+- Prover a estrutura do app e controla como os widgets visiveis são desenhados na tela
