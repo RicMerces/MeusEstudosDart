@@ -109,3 +109,100 @@ class MyApp extends StatelessWidget {
 
 - Desenha a tela o que o usuario ver
 - Prover a estrutura do app e controla como os widgets visiveis são desenhados na tela
+
+
+#### Column para organizar Widgets
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(PerguntaApp());
+}
+
+class PerguntaApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+          backgroundColor: Colors.purple,
+        ),
+        body: Column(
+          children: <Widgets> [
+            Text('Ola Flutter'),
+            Text('Salve salve'),
+            Text('Hello'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+Button 
+```dart
+body: Column(
+  children: <Widgets> [
+    Text(Perguntas[0]),
+    RaisedButton(
+      child: Text('Respostas 1'),
+      onPressed: null,
+    ),
+  ]
+)
+
+```
+
+Funções anonimas 
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(PerguntaApp());
+}
+
+class PerguntaApp extends StatelessWidget {
+  void responder() {
+    print("Bahia");
+  }
+
+  @override
+  Widget build(BuildContext) {
+    final List<String> perguntas = [
+      'Qual é a sua cor favorita ?',
+      'Qual é a seu animal favorito ?'
+    ];
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+          backgroundColor: Colors.purple,
+        ),
+        body: Column(
+          children: [
+            Text(perguntas[0]),
+            RaisedButton(
+              child: Text('Resposta 1'),
+              onPressed: responder,
+            ),
+            RaisedButton(
+              child: Text('Resposta 2'),
+              onPressed: () => print('Vasco'),
+            ),
+            RaisedButton(
+              child: Text('Resposta 3'),
+              onPressed: () {
+                print('Santos');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
