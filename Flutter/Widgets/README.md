@@ -206,3 +206,54 @@ class PerguntaApp extends StatelessWidget {
   }
 }
 ```
+
+### ESTADO
+No geral estado são dados e informações usados por sua app
+
+#### Estados app
+usuarios autenticado
+
+produtos carregados
+
+#### Estado do Widget
+Valor de campo de entrada
+
+O spinner de carregamento esta sendo exibido?
+
+
+### Statless VS Stateful
+
+#### Stateless
+
+Parametros(Dados de entrada) => Widget metodo build => Renderiza a UI 
+
+Quando mudados os parametros é preciso recarregar para ver as alterações e renderizar novamente a tela
+
+#### Stateful
+
+Parametros(Dados de entrada) => Widget metodo build com estado interno que causa uma renderização => Renderiza a UI 
+
+Quado os parametros ou estado interno forem atualizados havera uma nova renderização da interface
+
+### Container
+Lembra bastante com o que trabalhamos com o **HTML** fazendo pequenos paralelos.
+
+
+
+#### Child
+Conteudo
+```
+#### Padding
+Espaçamento interno do conteudo
+
+#### Border
+Borda do conteudo dado o limite do padding
+
+#### Margin
+Divisão com outros conteudos externos
+
+#### Container
+É a região onde fica por completo o conteudo, 
+junto com todas as propriedades
+```
+
