@@ -256,4 +256,12 @@ Divisão com outros conteudos externos
 É a região onde fica por completo o conteudo, 
 junto com todas as propriedades
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
 
+# Amplamente o que é o Flutter
+
+### Widgdets e Material Design 
