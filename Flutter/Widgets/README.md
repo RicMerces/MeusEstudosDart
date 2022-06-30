@@ -265,3 +265,34 @@ junto com todas as propriedades
 # Amplamente o que é o Flutter
 
 ### Widgdets e Material Design 
+
+São componentes para montar a estrutura das telas do Flutter
+
+### Widgets :
+
+#### Container 
+  Estrutura para colocar elementos dentro dele
+
+#### Row
+  Linhas para colocar componentes de interface um do lado do outro
+
+#### Column 
+  Colunas para colocar componentes de interdface um embaixo do outro
+
+#### Scaffold
+Gaveta de elementos
+
+#### Image
+#### Text
+#### Icon
+#### Button
+#### AppBar
+
+
+### Assets
+Elementos externos implantados no codigo : Imagens, links etc...
+
+### Material App
+
+Biblioteca de Padrões de Design para o Flutter criada pelo Google
+
