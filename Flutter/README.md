@@ -530,3 +530,10 @@ Widgets que indicam o progresso
 
     - Inderteminado - value é nulo
         - Indica pro usuario o carregamento porem não mostra um valor especifico (Chamada de API)
+
+
+
+# Multiplas Abas
+- Multiplas abas: 
+    - BottomNavigationBar + BottomAppBar
+    - TabBar
