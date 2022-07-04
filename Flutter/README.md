@@ -534,6 +534,28 @@ Widgets que indicam o progresso
 
 
 # Multiplas Abas
-- Multiplas abas: 
+#### Multiplas abas: 
     - BottomNavigationBar + BottomAppBar
     - TabBar
+
+#### Controller para estados complexos (abas):
+    - PageController e TabController
+
+
+#### Associar conteudo a uma aba
+    - PageView e TabBarView
+
+
+#### Modelos e Layout para uma aba dinamica
+
+
+### BottomNavigationBar
+
+- Widget usado na parte inferior da tela para seleçao entre diferentes abas
+  - Pode ser criado no Scaffold
+  - Nao deve ter menos de 3 ou mais de 5 abas
+  - Possui dois tipos de operação: Fixed e shifting
+
+- Cada item na barra pode ter um texto, icone
+ou ambos num formato de uma coluna
+  - Itens podem ser personalizados a depender do estado de seleção
