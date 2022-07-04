@@ -559,3 +559,10 @@ Widgets que indicam o progresso
 - Cada item na barra pode ter um texto, icone
 ou ambos num formato de uma coluna
   - Itens podem ser personalizados a depender do estado de seleção
+
+### BottomAppBar
+- Widget inspitado numa AppBar, so que na parte inferior da tela
+  - Não possui a maioria das funcionalidades da appbar(bottom, leading, actions)
+  - Não possui o objetivo de gerenciar abas
+
+- Um Floating App Bar pode ser embutido usando ou não um notch (entalhe ou corte)
