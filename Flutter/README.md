@@ -642,3 +642,24 @@ Classe importante onde é colocado um timer com um periodo de tempo determinado
 É o controle do percurso de uma animação dentro do duration para que se faça alguma açao
   - Dificilmente criamos um objeto diretamente 
   - Usamod a classe **Curves** que facilita a criação a partir das curvas matematicas famosas.
+
+### TabBar
+Mais uma maneira de navegar entre abas/paginas funcionando com o mesmo intuito da bottom app bar porem se localizando na app bar 
+
+- Widget que exibe abas horizontais
+  - Criada dentro de AppBar, no Bottom dela
+  - Possui um indicador para a aba ativa, que pode facilmente ser costumizado
+
+- O MaterialDesign recomenda cautela ao usar uma TabBar com uma BottomNavigationBar 
+  - TabBar -> Abas de assunto em comum
+  - BottomNavigationBar -> Abas de nivel superior, sem conexão entre os itens
+
+### TabController 
+Que assim como na BNB, porem é obrigatorio para funcionar, é preciso de um controller para realizar a seleção de abas quanto a animação entre elas 
+  - Controla tanto a seleção entre abas quanto a animação entre elas
+     - Usa tambem o ChangeNotifier
+     - TabBar não funciona sem um controller
+
+  - É um controller de uso complexo(Animação)
+    - Então, para facilitar a maioria dos casos, nos podemos usar o DefaultTabController
+      - Um Widget que precisa somente do numero de abas e o flutter conecta a TabBar e o Controller automaticamente
