@@ -566,3 +566,63 @@ ou ambos num formato de uma coluna
   - Não possui o objetivo de gerenciar abas
 
 - Um Floating App Bar pode ser embutido usando ou não um notch (entalhe ou corte)
+
+- BottomAppBar pode ser combinada com a BottomNavigationBar
+
+
+# Acesso ao estado
+
+Como usar o estado de Widgets filhos? 
+- Como nos não temos referencia dos Widgets, se torna complexo acessar o estado.
+- Até existem formas de fazer (GlobalKey), mas devemos evitar, pois podem levar a uma quebra de padrão (Anti-pattern) e ter impactos na performace do app.
+
+- Solução: dar controle ao Widget pai sobre o estado do Widget filho usando um Controller 
+
+### Controller : 
+- Faz parte de um padrão de arquitetura de projeto introduzido em 1970 chamado de MVC (Model, view e controller)
+
+- Muito usado para desktop/web e que se expandiu para o mundo mobile
+
+- O controller é responsavel por formatar, controlar, organizar o fluxo de dados.
+  - Onde concentramos a logica de negocio
+  - (Condicionais, gerenciar estados...)
+
+### Controller no flutter
+- Nem todo Widget possui um Controller, ja que a gente sempre pode mudar o estado da nossa arvore usando o setState
+- Alguns Widgets possuem estados complexos e que precisariam de muitos callbacks para habilitar o controle ou utilização
+  - O controller existe, para facilitar e abstrair o uso de um estado que seja complexo.
+
+### Cuide do seu Controller
+- Um Controller geralmente é criado dentro do State de um StatefulWidget pai e passado pelo construtor para um Widget filho
+- Não devemos usar os Controllers em StatelessWidgets por serem objetos grandes complexos e de **vida longa**
+  - Precisam ser "Mortos" no metodo **dispose()**
+  - Caso esqueçamos de finalizar/matar um controller, podemos ter problemas graves de memoria, como um **memory leak**
+
+### Onde encontramos controller 
+- Nao existe uma implementação abstrata de um controller no flutter, cada Widget vai criar o seu, de acordo com a necessidade
+
+- Um ponto em comum de varios controllers é herdar da classe **ChangeNotifier**
+  - Provê uma notificação para ouvintes quanndo acontece uma mudança
+  - Podemos passar um callback para ser executado quanndo a notificicação chega
+
+```dart
+  String count = '0';
+
+  void initState(){
+    super.initState();
+    Widget.controller.addListener((){
+      count = widget.controller.count.toString();
+    });
+  }
+
+  class CounterController extends ChangeNotifier{
+    int _counter = 0;
+    int get count => _counter;
+
+    void increment(){
+      _counter++;
+      notifyListerners();
+    }
+  }
+
+
