@@ -663,3 +663,41 @@ Que assim como na BNB, porem é obrigatorio para funcionar, é preciso de um con
   - É um controller de uso complexo(Animação)
     - Então, para facilitar a maioria dos casos, nos podemos usar o DefaultTabController
       - Um Widget que precisa somente do numero de abas e o flutter conecta a TabBar e o Controller automaticamente
+
+
+### TabBarView
+- Widget geralmente usado para conectar a tab selecionada numa tabbar com uma aba
+  - Stateful Widget que retorna um PageView
+
+- Usa um TabController, mas tambem se conecta com um DefaultTabController
+
+- Precisa receber a mesma quantidade de abas que foi definido na TabBar
+
+### Model
+A maior parte das arquiteturas ou padrões de projeto que usam o termo Model, (MVC, MVVM, MVP...)
+
+- Em cada utilização o Model vai ter sua particularidade, mas de forma ampla o model é a representação de um dado
+  - Traduzindo: uma classe
+
+- Uma aplicação direta no Flutter é a utilização de Modelos como estado!
+
+### Modelos como estados 
+- Utilizando modelos, nos ganhamos a capacidade de reutilizar a nossa para diferentes conteudos: 
+
+```dart 
+final name = 'Casimiro';
+final city = 'Rio de Janeiro';
+```
+usando o model
+```dart
+class Person{
+  const Person(this.name, this.city);
+  final String name;
+  final String city;
+}
+
+final Person person;
+
+String name = person.name;
+String city = person.city;
+```
