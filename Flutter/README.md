@@ -624,5 +624,21 @@ Como usar o estado de Widgets filhos?
       notifyListerners();
     }
   }
+```
+### PageView
 
+Widget usado para exibir multiplas paginas podendo ser usado como carrossel escrolavel para mudar de tela.
 
+- Possui um PageController para controlar qual pagina esta sendo exibida 
+  - Permite a navegaçao entre paginas
+  - Voce pode usar ou nao animações
+
+### Duration
+Classe importante onde é colocado um timer com um periodo de tempo determinado 
+  - Muito usado pelo Flutter
+  - É de facil criaçao e possui muitas utilidades
+
+### Curve
+É o controle do percurso de uma animação dentro do duration para que se faça alguma açao
+  - Dificilmente criamos um objeto diretamente 
+  - Usamod a classe **Curves** que facilita a criação a partir das curvas matematicas famosas.
