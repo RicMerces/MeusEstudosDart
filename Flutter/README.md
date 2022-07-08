@@ -701,3 +701,21 @@ final Person person;
 String name = person.name;
 String city = person.city;
 ```
+
+### TabBarView 
+- Widget geralmente usado para conectar a tab selecionada numa TabBar com uma aba 
+  - Stateful Widget que retorna um PageView
+
+
+# Listas
+
+- Builder e BuldContext
+- Listas usando ListView e GridView 
+  - Itens (Celulas): ListTile e GridTile 
+
+- Widgets que compõe o layout de um item:
+  - CircleAvatar, Divider, GridTileBar
+
+- Conceitos de ViewModel e Closure
+
+- Interação com uma Lista
