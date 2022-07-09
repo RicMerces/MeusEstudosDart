@@ -719,3 +719,32 @@ String city = person.city;
 - Conceitos de ViewModel e Closure
 
 - Interação com uma Lista
+
+
+### Builder
+- Callback (Forma mais comum)
+- Widget
+
+- Builder nada mais é uma função que retorna um widget
+
+
+```dart
+typedef WidgetBuilder = Widget Function(BuildContext context);
+```
+- Existe tambem o Builder Widget
+  - Sua função é executar em seu metodo build o callback WidgetBuilder
+
+
+```dart
+class Builder extends Stateless {
+    const Builder({
+      Key? key,
+      required this.builder,
+      }) : super(key: key);
+    
+    final WidgetBuilder builder;
+
+    @override
+    Widget build(BuildContext context) => builder(context);
+}
+```
