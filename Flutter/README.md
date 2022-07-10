@@ -748,3 +748,16 @@ class Builder extends Stateless {
     Widget build(BuildContext context) => builder(context);
 }
 ```
+
+### ListView
+
+- Uma lista de Widgets, com scroll, alinhados linearmente
+- Os filhos ocupam o tamanho horizontal da lista
+- Usado para pequenas listas
+- Os filhos precisam ser tratados individualmentes
+
+### ListView.builder
+
+- Uma lista DINAMICA de widgets, com scroll,, allinhados linearmente.
+
+- Filhos são criados sobre demandas
