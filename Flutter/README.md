@@ -761,3 +761,30 @@ class Builder extends Stateless {
 - Uma lista DINAMICA de widgets, com scroll,, allinhados linearmente.
 
 - Filhos são criados sobre demandas
+
+- Widgets que não aparecem na tela são destruidos e reutilizados automaticamentes
+
+
+
+
+### ListTile
+
+Basicamente uma estilização padronizada de elementos em listas
+- Widget que implementa o recomendado pelo Material Design um item numa lista 
+  - Muitas vezes usado como Card (Elevação)
+
+- Caracteristicas principais: 
+   - Até três linhas de texto (Title and subtitle)
+      - Para 3 linhas deve-se ativar o isThreeLine
+   - Leading: icone ou imagem no inicio (estatico)
+   - Dense: compactar o tamanho do item
+   - onTap: Interação do usuario com itens
+
+
+### CircleAvatar
+
+- Widget usado para representar um usuario geralmente com uma imagem ou as iniciais do nome com a cor de fundo
+
+- Apesar do CircleAvatar não exigir nenhum parametro, essa é a logica de carregamento: 
+  - ForegroundImage -> BackgroundImage -> BackgroundColor
+  
