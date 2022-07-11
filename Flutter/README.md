@@ -824,3 +824,19 @@ Basicamente uma estilização padronizada de elementos em listas
 3. Novo itemBuuilder, index = 1, closureNumber é recriada
 4. O callback antigo (2.) continua com closureNumber = '0'
 5. Quando o usuario aperta no 1 botao, sera printado '0'
+
+### GridView 
+- Widget para criar uma lista de 2D (Grid)
+  - Muito parecido com o ListView, o que muda é que podemos adicionar uma numero de eixos transversais (crossAxisCount)
+  - Um GridView pode se comportar como um ListView, basta que crossAxisCount = 1.
+
+- Os dois contrutores mais usados são :
+   - .count -> Poucos itens -> children
+   - .builder -> Muitos itens -> itemBuilder
+
+### GridDelegate
+  - Quando usamos o .builder precisamos criar um gridDelegate
+
+  - Delegation é um padrão que favorece a composição sem precisar de Herança.
+  - Define que um objeto use outro objeto (seu delegate) para executar uma tarefa sua
+  - A Apple (iOS) usa bastante esse padrão
