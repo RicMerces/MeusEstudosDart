@@ -787,4 +787,40 @@ Basicamente uma estilização padronizada de elementos em listas
 
 - Apesar do CircleAvatar não exigir nenhum parametro, essa é a logica de carregamento: 
   - ForegroundImage -> BackgroundImage -> BackgroundColor
+  - Então mesmo que não seja usado é sempre recomendado passar um bg color.
+
   
+### ViewModel
+ - Faz parte de um padrão de projeto/arquitetura chamado MVVM
+   - Model View ViewModel
+    - Muito usado pela Microsoft e pela Google
+
+ - View Model é um modelo responsavel por expor dados (estados) que sejam facilmente apresentados pela View (UI)
+    - Responsavel pela Logica de exibição
+    - Faz o papel de mediador, convertendo dados.
+
+
+### Fluxo da informação 
+
+- Sem ViewModel:
+  - Fonte de dados (Modelo e estado) com acesso direto a View (Responsavel por tratar as informações na tela)
+
+- Adicionando um ViewModel
+  - Fonte de dados recebe a view model (onde processa e expõe os estados que devem ser exibidos) e a View exibe que o ViewModel Expõe
+
+
+### ViewModel
+- Um dos maiores beneficios de usar uma ViewModel é desacoplamento da logica de apresentação com a View
+  - Com isso fica facil plugar e desplugar qualquer tipo de View numa viewmodel
+
+- Ao usar ViewModels, devemos ter o cuidado de não adicionar componentes de UI(Widgets) na VM, uma vez que o objetivo é que ela exiba somente os estados
+    - O trabalho de construir a UI é dos Widgets
+
+### Closure
+- Uma função anonima - Geralmente callback -  consegue 'Lembrar' de um valor acessado durante a criação, mas que foi criado num escopo externo.
+
+1. ClosureNumber é criado
+2. Botão é criado com onPressed recebendo o closureNumber = '0'
+3. Novo itemBuuilder, index = 1, closureNumber é recriada
+4. O callback antigo (2.) continua com closureNumber = '0'
+5. Quando o usuario aperta no 1 botao, sera printado '0'
