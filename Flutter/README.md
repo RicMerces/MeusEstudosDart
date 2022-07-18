@@ -840,3 +840,72 @@ Basicamente uma estilização padronizada de elementos em listas
   - Delegation é um padrão que favorece a composição sem precisar de Herança.
   - Define que um objeto use outro objeto (seu delegate) para executar uma tarefa sua
   - A Apple (iOS) usa bastante esse padrão
+
+
+### GridTile
+- Assim como o ListView tem o ListTile, o GridView tem o GridTile
+
+- Mas diferente do ListTile, temos um parametro obrigatorio, o child, que preenche todos o item
+
+- Alem disso, temos dois campos novos, o header e o footer, onde geralmente usamos o GridTileBar, onde condiguramos a maior parte do layout do item
+
+
+## Text Field
+
+- Widget muito usado, devido a sua grande variedade de recursos
+
+- Features
+  - InputDecoration
+    - Filled -> Background
+    - Border -> inputborder(outline)
+    - LabelText -> Identificação
+    - HelperText -> Guia
+    - ErrorText -> Erro
+    - HintText -> Exemplo
+    - Icon -> Fora do TextField, no canto esquerdo
+    - prefixIcon -> inicio
+    - suffixIcon -> Final
+
+  - TextEditingController controller
+    - text: acesso ao texto exibido
+    - clear(): limpa o textfield
+
+  - TextInputType Keyboardtype
+    - Define o tipo do teclado (ex: numerico)
+
+  - TextInputAction 
+    - Determina a açao a ser executada atraves do teclado (Geralmente next ou done)
+  
+  - FocusNode 
+    - Permite o controle fino do foco, muito usado quando precisamos realizar um percurso personalizado
+
+  - Flags 
+    - Autofocus: Determina o foco vai ser aplicado automaticamente, mostrando o tecllado logo em seguida 
+    - readOnly: Desabilita edição, mas não desabilita o campo
+    - Enabled: Desabilita o campo inteiro
+    - obscureText: esconde os caracteres
+
+  - Callbacks
+    - ValueChaeged<String> onChanged: 
+    chamado em toda e qualquer modificação de texto
+
+    - ValueChanged<String> onSubmitted:
+    quando o usuario indica que terminou de editar o texto
+
+  ### Alert Dialog
+  - Widget para informar algo ao ususario sobre situações que exigem confirmação
+
+  ### DatePicker
+    - Widget que mostra um dialofo onde o usuario pode selecionar uma data 
+      - Assim como o alertDialog
+
+  ### CheckBox e Switch
+    - Indicar confirmação de seleção
+
+
+
+
+
+
+
+
