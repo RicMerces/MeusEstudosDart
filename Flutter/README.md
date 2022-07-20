@@ -902,6 +902,63 @@ Basicamente uma estilização padronizada de elementos em listas
   ### CheckBox e Switch
     - Indicar confirmação de seleção
 
+### Assicronismo
+Chamadas para o futuro (joia do tempo)
+
+- Isolate e event loop
+  - base de funcionamentos do assync 
+
+- Chamadas assicronas 
+  - Resultado: Future e FutureBuilder
+  - Sequencias? Stream e StreamBuilder
+
+- Async e Await
+
+- Exception and error
+
+
+### O que é o assicronissimo
+
+- Capacidade de executar diferentes tarefas de forma cocorrente, ou seja, ao mesmo tempo
+  - Pogramação concorrente é uma caracteristica presente em todas as linguagens modernas
+  - Pois os programas precisam realizar varias ações ao mesmo tempo, como realizar ações simples do front até questões que envolvem relacionamento entre banco, servidor e API.
+
+- **Programação Sicrona**
+  - Normalmente ações sicronas são bem divididas e realizadas em fila ou seja em sequencia, logo antes é necessaria uma ação ser encerrada ou diminuida a potencia para que outra seja feita. 
+  - É necessario sempre evitar que uma tarefa ocupe todo o poder de processamento
+  - A programação sicrona, onde cada linha de codigo é executada sequencialmente e impede que outras tarefas sejam executadas até a sua finalização.
+    - Isso bloqueia o processamento pois o codigo que esta sendo executado no momento bloqueia as ações de outro que ja foi ou ira ser executado.
+    - Muitas vezes isso não é um problema, porque o processamento é muito rapido
+
+- Exemplos de processamento longo:
+
+  - Calculos complexos (processamento de imagem, por exemplo)
+  - Processamento baseado em tempo (timer, loop para contabilizar o tempo)
+  - Chamadas de API
+
+- Se essas operações fossem sicronas, o aplicativo provavelmente demoraria muito para ser executado e na maioria dos casos até realizar um "Crash", finalizar a execução forçadamente.
+  - Alguns SOs chegam a fechar o aplicativo de um tempo parado (ANR - Aplication not responding - ANDROID)
+  - Ou seja sempre bom usar chamadas assicronas para casos mais sufisticados para tornar o app mais fluido.
+
+
+### Como o Dart lida com chamadas assicronas ? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
