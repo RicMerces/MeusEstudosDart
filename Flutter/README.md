@@ -1015,9 +1015,28 @@ Future.error(Exception('Not Found'));
 //? Delayed 
 Future.deleyaed(const Duration(seconds: 1));
 ```
+- Na maioria dos casos não sera preciso criar um Future, porem é importante entender para conseguir lidar com os possiveis estados.
+  - then((T value){}): Executado quando completado com valor (sucesso)
+  - catchError((error){}): executado quando completado com um erro
+  - whenComplete((){}): Executado na finalização, independente de sucesso ou erro
 
 
+### Lidando com o Future 
+- Podemos criar cadeias de Future conforme a necessidade: 
 
+```DART
+  Future<int>.value(40)
+    .then((age) ==> Future<String>(() => 'My age is $age')).then((myAge) => debugPrint(myAge));
+
+```
+- Alem de filtrar diferentes erros com test
+```
+   Future.error('Now my error is a String').
+   catchError((error) => debugPrint(error),
+      test: (error) => error is String).catchError((error) => debugPring(error.toString()),
+        test: (error) => error is int
+      );
+``` 
 
 
 
