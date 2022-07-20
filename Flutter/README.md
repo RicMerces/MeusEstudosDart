@@ -943,6 +943,78 @@ Chamadas para o futuro (joia do tempo)
 
 ### Como o Dart lida com chamadas assicronas ? 
 
+- O Dart por ser uma linguagem multiplataforma, se conecta aos mecanismos de cada plataforma para lidar com memoria de processamento. Uma camada que abstrai todas as diferenças (ISOLATES).
+
+
+- Um isolate pe um pedaço de memoria isolado que possui um event loop
+  - Podemos criar mais de um isolate
+  - Não existe compartilhamento de memoria entre isolates, diferente de threads (locking), Simplifica nossa vida com uma camada de adm.
+
+- Quando um programa ou aplicativo Dart é iniciado, tudo é executado detro de um unico isolate chamado main isolate
+
+- Depois que o main() é executado (no flutter seria finalizar a construção da primeira tela), o event loop fica escutando por eventos e processa a cada evento numa fila em ordem de chegada.
+
+
+### EventLoop e Assicronismo
+
+1. Reaalizarmos uma chamada assicrona
+  - Nesse momento o Dart "Registra" um evento para quando a chamada for completada, consiga saber para onde voltar.
+
+2. Algum tempo passa
+
+3. Nossa chamda pe completada, então um "Evento de conclusão" entra na fila
+4. Quando chega a sua vez, o Dart executa nosso codigo que estava esperando
+
+
+### Descobrindo o Futuro
+
+- Future é uma classe que representa o resultado de um processamento assicrono 
+  - Future<T>, onde o T é o resultado eseperado (Futuro), ou seja ja sabemos o resultado que precisa ser resultado para a execuç~~ão 
+    - Future<int> (Referenciando o tipo)
+    - Future<MyClass> (Referenciando uma classe)
+
+  - O Future possui dois estados
+    - Completed e Uncompleted
+
+  #### Uncompleted 
+  O completed é uma possibilidade que ocorre no momento que você chama um metodo que retorna um Future, ele estando incompleto
+
+  #### Completed 
+  Depois de um tempo, a chamada assicrona é completada e pode retornar entre dois possiveis resultados
+  - O valor esperado (SUCESSO!)
+  - Um Erro
+
+- Escopo do Future
+  - Toda vez que trabalharmos com assicronismo precisamos adicionar a palavra-chave **async**
+  no escopo da chamada e retornar um **Future**
+    - Costuma-se chamar esse processo de "Anotar" a função/metodos como assicrono
+    - Dessa forma o Dart consegue diferenciar entre escopos sicronos e assicronos
+
+```dart
+  String mySyncFunction(){
+    return 'Escopo sicrono';
+  }
+
+  Future<String> myAsyncFunction() async {
+    return 'Escopo assicrono';
+  }
+```
+
+Construtores do Future
+
+```dart
+//Default
+Future<String>(() => 'Back to the future');
+
+//Value
+Future<int>.value(40);
+
+//! Error
+Future.error(Exception('Not Found'));
+
+//? Delayed 
+Future.deleyaed(const Duration(seconds: 1));
+```
 
 
 
