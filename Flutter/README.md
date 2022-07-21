@@ -1073,16 +1073,18 @@ bool get hasError => error != null;
 - Alem dessas flags, existe uma propriedade que indica em qual momento do ciclo de vida do future um determinado snapshot
 representa: o **ConectionState**
 
+### ConectionState
+- Quando usado o FutureBuilder, o connectioState pode ser :
+  - none: nenhuma chamada assicrona acontecendo no momento
+  - Waiting: chamada assicrona em andamento, esperando por resposta
+  - Dona: Quando a chamada assicrona for finalizada
 
 
 
+- Podemos escutar pelas mudanças do ConectionState para construir a nossa UI, reagindo aos diferentes estados
 
+#### Cuidados importantes
+ - O ideal é que façamos a chamda no initState ou em outro objeto que obtenha a referencia a chamada assicrona, não diretamente no FutureBuilder pois pode tornar a UI mais lenta 
+  - FutureBuilder  deve ser usado somente para exibir mudanças na UI 
 
-
-
-
-
-
-
-
-
+- Outro cuidado
