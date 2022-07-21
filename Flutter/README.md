@@ -1029,7 +1029,7 @@ Future.deleyaed(const Duration(seconds: 1));
     .then((age) ==> Future<String>(() => 'My age is $age')).then((myAge) => debugPrint(myAge));
 
 ```
-- Alem de filtrar diferentes erros com test
+- Alem de filtrar diferentes erros com test:
 ```
    Future.error('Now my error is a String').
    catchError((error) => debugPrint(error),
@@ -1039,10 +1039,39 @@ Future.deleyaed(const Duration(seconds: 1));
 ``` 
 
 
+### FutureBuilder
+- Widget quee se reconstroi conforme a interação com um Future
+  - Não é um Widget obrigatorio
+  - Parametro obrigatorio (AsyncWidgetBuilder)
+
+```dart
+  typedef AsyncWidgetBuilder<T> = Widget Function(
+    BuildContext context,
+    AsyncSnapshot<T> snapshot,
+  )
+```
+
+- Alem do builder, temos mais 2 parametros opcionais 
+  - Future: Chamada assicrona
+  - initialData: usado para primeiro estado do AsyncSnapshot, ja que na maioria das vezes o future ainda esta incompleto
 
 
+### AsyncSnapshot<T> snapshot
+- Representa a interação mais recente entre o estado Future eo momento em que o builder foi chamado
 
+- Quando o Future é finalizado, temos acesso ao resultado atraves da propriedade T data.
 
+- Quando o Future é concluido com um erro, podemos usar a propriedade error para informalo ao usuario.
+
+- Existem duas flags para verificar se os valores são diferentes de null
+
+```dart
+bool get hasData => data != null;
+bool get hasError => error != null;
+```
+
+- Alem dessas flags, existe uma propriedade que indica em qual momento do ciclo de vida do future um determinado snapshot
+representa: o **ConectionState**
 
 
 
