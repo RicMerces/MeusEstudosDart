@@ -1085,6 +1085,6 @@ representa: o **ConectionState**
 
 #### Cuidados importantes
  - O ideal é que façamos a chamda no initState ou em outro objeto que obtenha a referencia a chamada assicrona, não diretamente no FutureBuilder pois pode tornar a UI mais lenta 
-  - FutureBuilder  deve ser usado somente para exibir mudanças na UI 
+   - FutureBuilder  deve ser usado somente para exibir mudanças na UI 
 
-- Outro cuidado
+- Outro cuidado é observar o estado a UI, se criarmos um Future que é completado antes do build finalizar, não recebemos no snapshot o resultado esperado 
