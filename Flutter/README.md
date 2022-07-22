@@ -1088,3 +1088,59 @@ representa: o **ConectionState**
    - FutureBuilder  deve ser usado somente para exibir mudanças na UI 
 
 - Outro cuidado é observar o estado a UI, se criarmos um Future que é completado antes do build finalizar, não recebemos no snapshot o resultado esperado 
+
+
+### Future e Callbacks
+
+- Fazer chamadas assicronas com Future passando callbacks pode ser algo complexo, principalmente quanto temos uma cascata de chamadas assícronas (callback hell)
+
+- Alem disso, enteder quando os callbacks vão ser executados pode ser confuso : 
+  - Fução sicrona -> chamada assicrona - > callback then
+  - Quando que meu callback vai ser executado mesmo ? 
+
+### Async e Await 
+- Transforma chamadas assicronas e callbacks, em algo similar a chamadas sicronas tornando menos complexos de se compreender (usando como palavra chave **async** e **await**)
+
+Usando apenas future sem async e await :
+```dart 
+void mySyncFunction() {
+    Future<int>.value(40)
+      .then((age) => Future<String>(() => 'My age is $age' ))
+      .then((myAge) => debugPrint(myAge));
+}
+```
+usando async e await, criando um fluxo sicrono dentro de uma função assicrona pois contem uma ordem graças ao await q so é executado apos o future
+```dart 
+//Funcao do tipo async torna uma função automaticamente em assicrona
+Future<void> myAsyncFunction() async{
+  //O await vira uma maneira de referenciar um valor 
+  final age = await Future<int>.value(40);
+  final myAge = await Future<String>(() => 'My age is $age' );
+  debugPrint(myAge);
+}
+```
+#### Resumo
+1. Sempre precisamos adicionar o Async no escopo que desejamos usar o Await.
+
+2. Todo codigo apos o await somente sera executado apos a finalização do future.
+
+3. É recomendado adicionar o Future<T> no retorno da função mesmo se for void.
+
+- Como funcionaria a equivalencia usando callbacks do Future ?
+  - Usando Async/await não temos a opção de adicionar os callbacks **catchError** ou **whenComplete**.
+  - Para resolver esse problema podemos adicionar o bloco **try/catch/finally**
+
+```dart 
+Future<void> main() async {
+  try {
+    final age = await getAge();
+    debugPrint(age.toString());
+  } on Exception catch (exception) {
+    debugPrint(exception.toString());
+  }finally {
+    debugPrint('Done');
+  }
+}
+
+Future<int> getAge() => throw Exception('Not found'); 
+```
