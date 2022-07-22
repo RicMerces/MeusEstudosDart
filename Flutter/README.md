@@ -1144,3 +1144,79 @@ Future<void> main() async {
 
 Future<int> getAge() => throw Exception('Not found'); 
 ```
+
+### Singular e Plural 
+
+- Futures são excelentes para representar uma chamada assicrona que retorna um resultado 
+  - Mas quando nos precisamos receber uma sequencia de resultados ? ou desejamos ser informados quando um dado foi alterado ?
+  - Para uma sequencia de dados assicronos nos podemos usar as <**Streams**>
+
+No caso das chamadas sicronas e assicronas tendo em mente a ordem **Tipo de chamda -> Um resultado -> sequencia** : 
+$$Sicrona -> int -> List<int>$$ 
+$$Assicrona -> Future<int> -> Stream<int>$$
+
+#### Analogia simples : 
+- Para ajudar na compreensão do funcionamento das Streams seria a exibição de video online (YouTube, Netflix, etc)
+   - Pedaços do video são carregados com o tempo (barra de carregamento)
+   - Pode acontecer algum erro no meio do carregamento, ou seja não existe uma garantia que o video sera completado.
+
+- Uma Stream tem o mesmo principio de funcionamento : Eventos são enviados assicronamente até sai a finalização
+
+- A classe stream possui diversos contrutores, mas são usados para casos muito especificos
+   - Geralmente quando desejamos criar uma Stream, nos usamos ou um metodo que retorna uma Stream ou criamos um StreamController (mais comum)
+
+  - Assim como no Future, teremos que lidar muito mais com Streams existentes a criação de novas Streams
+
+#### Escutando uma Stream
+
+- Uma Stream pode emitir diferentes eventos, que tambem são chamados de elementos: 
+  - Um dado (Sucesso)
+  - Um erro
+
+- Para escutar os elementos de um Stream precisamos usar metodos listen , que registra callbacks para processamento dos elementos recebidos
+  - O metodo listen retorna um objeto de StreamSubscription
+
+- O metodo listen possui quatro parametros : 
+  - Void onData(T event) : Quando um evento T é recebido
+  - Void onError(Object error) : Quando um ellemento é um erro
+  - Void onDone () : Qiamdp a stream é finalizada
+  - bool cancelOnError: Se a stream deve ser cancelada quando um ero é recebido
+
+O listen so pode ser chamado uma vez, a não ser que seja usado a asBroadcastStream()
+
+- StreamSubscription
+  - Ao escutar uma stream, nos recebemos uma instancia da streamsubscription que possui alguns metodos importantes
+    - pause(), resume() e cancel()
+  
+  - Mesmo que não seja obrigatoria, é importante que uma StreamSubscription seja cancelada no dispose() para evitar que aconteça algum vazamento de memoria
+
+
+- Para criar uma stream
+  - Usando o **Async*** QUE INDICA QUE VARIOS ELEMENTOS PODEM SER EXIBIDOS
+
+  - Emitir elementos com o yield
+
+```dart 
+void main(){
+  myTimerCounter(10).listen((event) {
+    debugPrint(event.toString());
+  });
+}
+Stream<int> myTimeCounter(int limit) async* {
+  for(int count = 0; count < limit; count++){
+    await Future.delayed(const Duration(seconds: 1));
+    yield count;
+  }
+}
+```
+#### StreamController<T>
+- Possui diversas propriedades (e alguns callbacks), mas duas mais importantes :
+  - Stream<T> stream: retorna a Stream que esse StreamController gerencia
+  - StreamSink<T> sink> usando para adicionar elementnos na stream
+
+#### CUIDADOS
+- Geralmente deve estar privado
+
+
+
+ 
