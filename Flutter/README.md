@@ -1215,8 +1215,54 @@ Stream<int> myTimeCounter(int limit) async* {
   - StreamSink<T> sink> usando para adicionar elementnos na stream
 
 #### CUIDADOS
-- Geralmente deve estar privado
+- Geralmente deve estar privado stream ou sink
+- Chamar o metodo close()
 
 
+### Streams na UI 
+#### StreamBuilder<T>
+- Widget que se reconstroi conforme a interação com uma Stream
+  - Muito similar ao FutureBuilder
 
+- Principais parametros
+  - AsyncWidgetBuilder builder
+  - Stream<T> stream
+
+- Agora o ConectionState no snapshot vai assumir o estado de avtive
  
+- Manipulação de Streams
+   - Assimo como listas, nos podemos usar alguns metodos para manipular e transformar uma Stream
+    - Metodos comuns a List e Stream: Map, Where, fold e outros
+  - Alguns dos novos metodos: 
+    - Distinct: não emite novos elementos iguais ao ultimo elemento emitido
+
+
+
+### O que é estado
+Tudo que existe em uma memoria durante o uso do app é um estado
+
+#### Como gerenciar
+- Todos os assets
+- estados innternos do proprio flutter
+- Bibliotecas
+
+- Nos nao precisamos nos preocupar com esses estados, uma vez que eles não são nossa responsabilidade, e muitas vezes, nos nem temos acesso, então aa gerencia ficaa com seus criadores/donos
+
+#### O que é estado na pratica
+- Na pratica, um estado é qualquer coisa que nos precisamos usar para reconstruir a UI do nosso app num determinado momento
+- Uma String que muda o texto, a cor , conforme a interação do usuario
+- Um modelo custumizado que constroi item de uma lista
+- Um bool que controla uma checkbox ou switch
+- Podendo ser tambem um dado que vem de uma api ou serviço externo
+
+### Tipos de estados
+
+- **Efemeros** Um estado simplesque não muda de forma complexa ou precise de uma logica de negocio para ser criado
+  - Estados de UI ou estados locais (fica geralmente em um Widget)
+    - A pagina atual de um pageview
+    - uma flag controlada por um checkbox ou switch para mostrar (ou não) uma parte da UI 
+    - Na maioria dos casos nao é necessario uma estrategia para estados enfemeros, podemos usar o proprio stateful widget
+
+- **Aplicação** Estado complexo que pode até ser compartilhado por diferentes partes do app
+
+  - Estados que precisam de uma logica mais aplicada, conexão com serviços externos e que pode ser reutilizada em outras partes do projeto, sem interferencia direta da UI, encontrada na logica do negocio e testes unitarios
