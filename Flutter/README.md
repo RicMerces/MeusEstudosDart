@@ -1553,6 +1553,37 @@ class Type {
   }
 }
 ````
+### Enum 
+
+Enum é um tipo ou uma classe que representa um numero fixo de valores constantes- 
+
+- Tipo Enumerado
+- Muito usado para categorizar itens
+	- Ex: tipos de carros, condiçoes climaticas, status de requisicao de api
+- Cada valor num enum possui um index, que retorna sua posicao na declaracao enum
+	- Index começa no 0
+
+```dart
+
+enum Operator {
+soma, subtracao, multipliucacao, divisao	
+}
+
+void simpleCalculator(){
+	const operator = Operator.subtracao;
+	final operatorIndex = operador.index;
+}
+
+switch (operador){
+	case Operador.soma: break;
+	case Operador.subtracao: break;
+	case Operador.multiplicacao: break;
+	case Operador.divisao: break;
+}
+
+- Temos acesso a todos os valores na forma de propriedade .values
+- Quando usamos um enum num switch nseremos informados com um warning quando algum valor n foi informado
+- Apesar de um enum ser uma classe, nao conseguimos usar herança
 
 
 
