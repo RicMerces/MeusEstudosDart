@@ -1466,6 +1466,93 @@ class Results {
   }
 }
 ````
+```json
+{
+    "id": 132,
+    "name": "ditto",
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+            }
+        }
+    ]
+}
+```
+
+https://jsonformatter.curiousconcept.com/#
+````dart 
+class PokemonDto {
+  int? id;
+  String? name;
+  List<Types>? types;
+
+  PokemonDto({this.id, this.name, this.types});
+
+  PokemonDto.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    if (json['types'] != null) {
+      types = <Types>[];
+      json['types'].forEach((v) {
+        types!.add(new Types.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['name'] = this.name;
+    if (this.types != null) {
+      data['types'] = this.types!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Types {
+  int? slot;
+  Type? type;
+
+  Types({this.slot, this.type});
+
+  Types.fromJson(Map<String, dynamic> json) {
+    slot = json['slot'];
+    type = json['type'] != null ? new Type.fromJson(json['type']) : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['slot'] = this.slot;
+    if (this.type != null) {
+      data['type'] = this.type!.toJson();
+    }
+    return data;
+  }
+}
+
+class Type {
+  String? name;
+  String? url;
+
+  Type({this.name, this.url});
+
+  Type.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    url = json['url'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['url'] = this.url;
+    return data;
+  }
+}
+````
 
 
 
