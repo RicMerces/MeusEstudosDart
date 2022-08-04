@@ -1586,7 +1586,9 @@ switch (operador){
 - Apesar de um enum ser uma classe, nao conseguimos usar herança
 
 
-
+Check - Consumo de api
+Check - Assicronismo
+Loading... - Gerenciamento de estado (Bloc/Cubit)
 
 
 
