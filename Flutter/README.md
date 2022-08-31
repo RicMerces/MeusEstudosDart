@@ -1266,6 +1266,7 @@ Tudo que existe em uma memoria durante o uso do app é um estado
 - **Aplicação** Estado complexo que pode até ser compartilhado por diferentes partes do app
 
   - Estados que precisam de uma logica mais aplicada, conexão com serviços externos e que pode ser reutilizada em outras partes do projeto, sem interferencia direta da UI, encontrada na logica do negocio e testes unitarios
+<<<<<<< HEAD
     - Estados e informaçoes de Login
     - Lista de conteudo buscada numa API
     - Carrinho de compras
@@ -1381,3 +1382,350 @@ Widget build(BuildContext context){
 
   
   
+=======
+  
+  
+  # Consumo de API
+
+- Camada de Dados no bloc 
+	- Repository e data source/provider
+- Crianndo um repositorio
+- Enum
+	- Aplicando no projeto
+- Finalização do Projeto
+	- Conectar camada de dados com o gerenciamento de estado
+
+
+### API
+
+- Aplication Pogramming Interfacee
+	- Interface de programação de aplicacao
+
+- APIs são restaurantes :
+1. Os pratos ficam disponiveis num cardapio
+2. Voce faz um pedido 
+3. A cozinha começa a preparar o pedido
+4. Depois de um tempo, o prato é entregue 
+
+- Uma API expõe dados e operações para outros sistemas 
+consumirem (Backend para Frontend : Mobile/Web/Postman
+	- Geralmente a implementação nao é disponibilizada e como que os recursos foram implementados
+
+- O que mais importa é saber todos os metodos e tipos de respostas possiveis para receber (cardapio)
+	- Boas APIs tambem disponibilizam uma boa documentação para facilitar a utilização
+
+### Por que usar uma API
+
+- Economizar tempo de construção de uma funcionalidade em um projeto 
+	- Ou seja importamos uma funcionalidade de uma API para algumas funcionalidades a serem implementadas no projeto
+
+- APIs criam consistencia e seguraça entre eiferentes serviços, aplicativos e plataformas
+	-  Se uma empresa disponibiliza um servico usando apis todos os seus cosumidores receberam a mesma informação
+
+### Tipos de API
+- Existem diversas classificações de api
+
+	- Um codigo que faz uma abstração de uma funcionalidade pode ser chamado de API
+	- Nos podemos ter apis internas num projeto, que nos mesmos podemos criar ou usar de serviços externos
+
+- Perspectiva generica a partir de um app:
+	- APIs internas
+		- Local (Projeto)
+		- Framework (Flutter)
+		- Sistema Operacional (Android, iOS, etc)
+
+	- APIs Externas 
+		- Pacotes/bibliotecas (pub.dev)
+		- Backend proprio (ambiente empresarial)
+		- Web APIs (Web Service)
+
+### Web API 
+- Serviço online para ter acesso ou processar algum tipo de dado
+(podem ser gratuitas/pagas/pacotes mensais)
+	- EX: AccuWeather(clima), Google Maps, Skyscanner (passagens) e Facebook
+
+- Em muitos casos, precisamos nos registrar para usar uma Web API, recebenndo uma chave de api, que nos indentifica e atrela a nossas requisiçoes
+
+### Rest API 
+- Apis geralmente seguem algum protocolo ou conjunto de arquiteturas
+	- O tipo de Web API mais connhecido é o REST (Representational state transfer)
+		- Tambem chamada de RestFul API
+- Nao existe um padrão de implementação para rest apis, mas existem agumas restriçoes :
+	- Arquitetura cliente/servidor por HTTP
+	- Toda requisicao deve conter todas as informações necessarias para sua execuçao
+### Como usar uma REST API
+- Para usar uma REST API precisamos fazer uma chamada assicrona HTTP para um servidor externo com todas as informaçoes necessarias e aguardar resultado
+- O Protocolo HTTTP é um dos pilares da internet e possui um conjunto de regras e padroes (RFCs)	
+	- Os metodos GET (requisicoes) e POST (criacao/atualizaçao) sao os mais usados
+		- HTTP nao possui garantia de conclusao podemos receber erros HTTP (EX 404)
+
+- Precisamos direcionar a requisiacao a um servidor externo que identifica por uma URI (Uniform Resource Indentifier)
+	- Uma API geralmente possui uma URL base e diversos endpoints (/data, /location) que compõe uma URI 
+
+- Por fim passamos todos os parametros 
+
+### Fluxo
+
+apiKey: abc123				       www.api.com
+
+App 	  	   ---Async GET--->     	REST API 
+		GET/movies?key=abc123
+
+	      <==HTTP 200 OK | body: {}===
+
+- URI: http://www.api.com/movies?key-abc123
+- Respostas 200 não garante que chamada retornou os dados que desejamos (chamada feita com sucesso)
+- Depois precisamos checar por dados no body que geralmente é no formato JSON
+
+
+### Map
+- Um objeto que associa uma determinada chave com os valores
+	- Podem ser qualquer tipo
+	- Dart suporta a criacao de maps com a criacao direta com {} ou usando a classe/tipo Map
+
+```dart
+final yearlyResults = <int, String>{
+	2020: 'Not so good',
+	2021: 'Can it be worse?',
+}
+
+final movieMap = Map<String, dynamic>();
+movieMap['duration'] = 78.0;
+```
+
+#### Manipulação de maps
+- Um map possui alguns metodos comuns a manipulação de listas como forEach, map, remove, adaptados aos pares de chave e valor
+ 	- Ex: forEach((key, value) =>);
+- Podemos acessar todas as chaves e valores na forma de lista usando .keys ou .values
+- Para verificar se uma chave ou valor pertence a um Map podemos usar containsKey e containerValue respectivamente
+
+
+#### Aplicacao de maps
+- Maps sao geralmente usados internamente como dicionarios ou um hash 
+
+
+
+### Manipulação de maps
+
+- Podemos acessar todas as chaves e valores na forma de lista .keys ou .value
+
+- Para verificar se uma chave ou valor pertence a um Map podemos usar containsKey e containsValue
+
+- Alem disso a maior parte das respostas de uma WebAPI pode ser traduzida com um Map
+	- O tipo Map<String, dynamic>
+
+### Json 
+- Notacao de troca de informaçao que facilita na criacao e na leitura, onde permite que diversas tecnologias conseguem interagit
+
+object {string : value}
+
+### Respostas em JSON 
+- Ao receber a resposta de uma Web API, o dart processa os bytes recebidos e nos entrega um body no formato de strning
+- Usar string direta não é muito versatil 
+- Esse processo de conversao é chamado de serialização de json
+	- Econding (codificação) conversao de um modelo/estrutura de dados em string
+	- Deconding (Decodificaçao) connversao de uma string num modelo/estrutura dedos
+- O dart possibilita algumas funcoes para serializar 
+	- jsonDecode (Strings source)
+	- jsonEncode (Object object)
+
+https://javiercbk.github.io/json_to_dart/
+
+```dart
+class Autogenerated {
+  int? count;
+  String? next;
+  Null? previous;
+  List<Results>? results;
+
+  Autogenerated({this.count, this.next, this.previous, this.results});
+
+  Autogenerated.fromJson(Map<String, dynamic> json) {
+    count = json['count'];
+    next = json['next'];
+    previous = json['previous'];
+    if (json['results'] != null) {
+      results = <Results>[];
+      json['results'].forEach((v) {
+        results!.add(new Results.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['count'] = this.count;
+    data['next'] = this.next;
+    data['previous'] = this.previous;
+    if (this.results != null) {
+      data['results'] = this.results!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Results {
+  String? name;
+  String? url;
+
+  Results({this.name, this.url});
+
+  Results.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    url = json['url'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['url'] = this.url;
+    return data;
+  }
+}
+````
+```json
+{
+    "id": 132,
+    "name": "ditto",
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+            }
+        }
+    ]
+}
+```
+
+https://jsonformatter.curiousconcept.com/#
+````dart 
+class PokemonDto {
+  int? id;
+  String? name;
+  List<Types>? types;
+
+  PokemonDto({this.id, this.name, this.types});
+
+  PokemonDto.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    if (json['types'] != null) {
+      types = <Types>[];
+      json['types'].forEach((v) {
+        types!.add(new Types.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['name'] = this.name;
+    if (this.types != null) {
+      data['types'] = this.types!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Types {
+  int? slot;
+  Type? type;
+
+  Types({this.slot, this.type});
+
+  Types.fromJson(Map<String, dynamic> json) {
+    slot = json['slot'];
+    type = json['type'] != null ? new Type.fromJson(json['type']) : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['slot'] = this.slot;
+    if (this.type != null) {
+      data['type'] = this.type!.toJson();
+    }
+    return data;
+  }
+}
+
+class Type {
+  String? name;
+  String? url;
+
+  Type({this.name, this.url});
+
+  Type.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    url = json['url'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['url'] = this.url;
+    return data;
+  }
+}
+````
+### Enum 
+
+Enum é um tipo ou uma classe que representa um numero fixo de valores constantes- 
+
+- Tipo Enumerado
+- Muito usado para categorizar itens
+	- Ex: tipos de carros, condiçoes climaticas, status de requisicao de api
+- Cada valor num enum possui um index, que retorna sua posicao na declaracao enum
+	- Index começa no 0
+
+```dart
+
+enum Operator {
+soma, subtracao, multipliucacao, divisao	
+}
+
+void simpleCalculator(){
+	const operator = Operator.subtracao;
+	final operatorIndex = operador.index;
+}
+
+switch (operador){
+	case Operador.soma: break;
+	case Operador.subtracao: break;
+	case Operador.multiplicacao: break;
+	case Operador.divisao: break;
+}
+
+- Temos acesso a todos os valores na forma de propriedade .values
+- Quando usamos um enum num switch nseremos informados com um warning quando algum valor n foi informado
+- Apesar de um enum ser uma classe, nao conseguimos usar herança
+
+
+Check - Consumo de api
+Check - Assicronismo
+Loading... - Gerenciamento de estado (Bloc/Cubit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+>>>>>>> 0ad136cc3a4805825e55c817b30d176cc7d2f408
