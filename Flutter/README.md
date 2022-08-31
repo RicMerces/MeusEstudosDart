@@ -1266,3 +1266,118 @@ Tudo que existe em uma memoria durante o uso do app é um estado
 - **Aplicação** Estado complexo que pode até ser compartilhado por diferentes partes do app
 
   - Estados que precisam de uma logica mais aplicada, conexão com serviços externos e que pode ser reutilizada em outras partes do projeto, sem interferencia direta da UI, encontrada na logica do negocio e testes unitarios
+    - Estados e informaçoes de Login
+    - Lista de conteudo buscada numa API
+    - Carrinho de compras
+    - É recomendado o uso de soluções de gerenciamento de estados 
+
+- OS ESTADOS SÃO VOLATEIS !
+Entao poderiamos estar usando um estado volatil e passar a usar um estado de aplicação e vice e versa, ou so usar estados de aplicação... Depende da situação, da arquitetura e se sentir necessidade. 
+
+
+*Faça se voce não sentir que esta estranho* - Dan Abramov
+
+
+
+#### O Processo de escolha
+Escolher uma soluçao de gerencia de estado não é uma tarefa facil, ja que existem varias opções
+
+#### Pontos principais
+*Não existe soluçao perfeita*
+  - Tudo questão de contexto e escolha do time de desenvolvimento
+  - Se existe uma comunidade 
+  - Escolher uma lib de gerencia pode ser depreciada
+  - Analisar a documentação
+  - Testar esses estados
+
+### As 5 soluções mais usadas para gerencia de estado 
+  - MobX
+  - Bloc
+  - Redux
+  - Dashoverflow (provider)
+  - GetX
+
+
+
+## Bloc
+
+- Criada pelo google foi a primeira grande solução de gerenciamento de estado para o Flutter
+- Usando fortemente conceito de eventos assicronos com Stream e StreamBuilders
+  - Lembra a forma como o Event Loop funciona
+- Definição resumida: Todo evento é processado por uma Logica de negocio que estados para UI ser reconstruida
+
+### Componentes Principais
+- Cubit
+```dart
+class CounterCubit extends Cubit<int>{
+  CounterCubit() : super(0);
+
+  void increment() => emit(state + 1);
+
+}
+```
+
+- Bloc
+```dart
+abstract class CounterEvent {}
+class CounterIncrementPressed extends CounterEvent{}
+
+class CounterBloc extends Bloc<CounterEvent, int>{
+  CounterBloc() : super(0){
+    on<CounterIncrementPressed>((event, emit){
+      emit(state + 1);
+    });
+  }
+}
+```
+- BlocBuilder (flutter_bloc) (na UI) :
+
+```dart
+@override 
+Widget build(BuildContext context){
+  return BlocBuilder<CounterBloc, int>(
+    bloc: counterBloc,
+    builder: (context, state){
+      return Text(state.toString());
+    },
+  );
+}//BlocBuilder
+```
+
+```dart
+@override 
+Widget build(BuildContext context){
+  return BlocBuilder<CounterCubit, int>(
+    bloc: counterCubit,
+    builder: (context, state){
+      return Text(state.toString());
+    },
+  );
+} //BlocBuilder
+```
+
+### Bottom sheet
+- Widdget que exibe um conteudo adicional que fica fixo na parte inferior na tela 
+  - Geralmmente aparece apos alguma interaçao e possui uma animaação ao entrar em foco
+
+- No material design existem dois tipos
+  - Persistente e modal
+
+- Persistente 
+  - Usado quando precisamos que ela permaneça visivel com outros compotentes na tela
+    - Exemplo play de baixo spotify 
+
+- Modal
+  - Funciona como um popup
+     - Exemplo Compartilhar algo 
+
+
+### Event-driven Bloc 
+
+- Eventos podem surgir de diversos locais 
+  - Uma interação com o usuario
+  - Uma relação com outro Bloc 
+  - Todas as opçoes acima ao "Mesmo tempo"
+
+  
+  
